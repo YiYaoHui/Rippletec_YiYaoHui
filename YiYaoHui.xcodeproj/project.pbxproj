@@ -1,0 +1,875 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		868144F91C1169E600198090 /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868144F51C1169E600198090 /* FeedbackController.swift */; };
+		868144FA1C1169E600198090 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868144F61C1169E600198090 /* LoginController.swift */; };
+		868144FB1C1169E600198090 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868144F71C1169E600198090 /* RegisterController.swift */; };
+		868144FC1C1169E600198090 /* RegisterFinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868144F81C1169E600198090 /* RegisterFinishController.swift */; };
+		868144FE1C11985F00198090 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868144FD1C11985F00198090 /* SettingController.swift */; };
+		868145001C11A8AF00198090 /* ModifyCipherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868144FF1C11A8AF00198090 /* ModifyCipherController.swift */; };
+		868145221C11B25600198090 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868145041C11B25600198090 /* TencentOpenAPI.framework */; };
+		868145231C11B25600198090 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 868145051C11B25600198090 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		868145241C11B25600198090 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 868145071C11B25600198090 /* libWeiboSDK.a */; };
+		868145251C11B25600198090 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 868145111C11B25600198090 /* WeiboSDK.bundle */; };
+		868145261C11B25600198090 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 868145151C11B25600198090 /* libWeChatSDK.a */; };
+		868145271C11B25600198090 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 868145161C11B25600198090 /* read_me.txt */; };
+		868145281C11B25600198090 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8681451A1C11B25600198090 /* MOBFoundation.framework */; };
+		868145291C11B25600198090 /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8681451B1C11B25600198090 /* ShareSDK.bundle */; };
+		8681452A1C11B25600198090 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8681451C1C11B25600198090 /* ShareSDK.framework */; };
+		8681452B1C11B25600198090 /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8681451D1C11B25600198090 /* ShareSDKConnector.framework */; };
+		8681452C1C11B25600198090 /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8681451E1C11B25600198090 /* ShareSDKExtension.framework */; };
+		8681452D1C11B25600198090 /* ShareSDKInterfaceAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8681451F1C11B25600198090 /* ShareSDKInterfaceAdapter.framework */; };
+		8681452E1C11B25600198090 /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 868145201C11B25600198090 /* ShareSDKUI.bundle */; };
+		8681452F1C11B25600198090 /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868145211C11B25600198090 /* ShareSDKUI.framework */; };
+		868145321C11B3A500198090 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 868145301C11B3A500198090 /* libicucore.A.tbd */; };
+		868145351C11B3AF00198090 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 868145341C11B3AF00198090 /* libz.1.1.3.tbd */; };
+		868145371C11B3C000198090 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868145361C11B3C000198090 /* JavaScriptCore.framework */; };
+		868145391C11B3D000198090 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868145381C11B3D000198090 /* ImageIO.framework */; };
+		8681453B1C11B3DB00198090 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8681453A1C11B3DB00198090 /* AdSupport.framework */; };
+		8681453D1C11B3FF00198090 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8681453C1C11B3FF00198090 /* libsqlite3.0.tbd */; };
+		8681453F1C11BD4800198090 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8681453E1C11BD4800198090 /* libc++.1.tbd */; };
+		868145411C12DC8400198090 /* ForgetCipherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868145401C12DC8400198090 /* ForgetCipherController.swift */; };
+		868145431C12DD6300198090 /* ResetCipherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868145421C12DD6300198090 /* ResetCipherController.swift */; };
+		868145451C12E5DF00198090 /* AboutUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868145441C12E5DF00198090 /* AboutUsController.swift */; };
+		C109850E1C0F263000CB946C /* MedicineDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109850D1C0F263000CB946C /* MedicineDB.swift */; };
+		C10985111C0F27A500CB946C /* SecondLevelMedicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10985101C0F27A500CB946C /* SecondLevelMedicine.swift */; };
+		C10985131C0F34B800CB946C /* MedicineSQLite.db in Resources */ = {isa = PBXBuildFile; fileRef = C10985121C0F34B800CB946C /* MedicineSQLite.db */; };
+		C13D56151C0ACCA9005E9C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D56141C0ACCA9005E9C32 /* AppDelegate.swift */; };
+		C13D561A1C0ACCA9005E9C32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13D56181C0ACCA9005E9C32 /* Main.storyboard */; };
+		C13D561C1C0ACCA9005E9C32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13D561B1C0ACCA9005E9C32 /* Assets.xcassets */; };
+		C13D561F1C0ACCA9005E9C32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13D561D1C0ACCA9005E9C32 /* LaunchScreen.storyboard */; };
+		C13D56301C0ACEC6005E9C32 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D562F1C0ACEC6005E9C32 /* HomePageController.swift */; };
+		C13D56351C0AF8F5005E9C32 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D56341C0AF8F5005E9C32 /* OptionCell.swift */; };
+		C15C92541C0BD7DA0041EC73 /* MedicineListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15C92531C0BD7DA0041EC73 /* MedicineListController.swift */; };
+		C15C92761C0BF7110041EC73 /* MedicinePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15C92751C0BF7110041EC73 /* MedicinePageController.swift */; };
+		C15C927A1C0C08F80041EC73 /* NSObject+Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C15C92791C0C08F80041EC73 /* NSObject+Bridge.m */; };
+		C15C92A71C0C0BB10041EC73 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C15C92A51C0C0B820041EC73 /* libsqlite3.tbd */; };
+		C16ABF751C0FE10A007AAE28 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16ABF741C0FE10A007AAE28 /* HeaderCell.swift */; };
+		C16ABF771C0FF057007AAE28 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16ABF761C0FF057007AAE28 /* DetailCell.swift */; };
+		C16ABF791C0FF171007AAE28 /* LastLevelMedicineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16ABF781C0FF171007AAE28 /* LastLevelMedicineController.swift */; };
+		C17E73581C0F399E007C155D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E734E1C0F399E007C155D /* FMDatabase.m */; };
+		C17E73591C0F399E007C155D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E73501C0F399E007C155D /* FMDatabaseAdditions.m */; };
+		C17E735A1C0F399E007C155D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E73521C0F399E007C155D /* FMDatabasePool.m */; };
+		C17E735B1C0F399E007C155D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E73541C0F399E007C155D /* FMDatabaseQueue.m */; };
+		C17E735C1C0F399E007C155D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E73571C0F399E007C155D /* FMResultSet.m */; };
+		C17E73601C0F39E8007C155D /* FMDatabaseAdditionsVariadic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E735E1C0F39E8007C155D /* FMDatabaseAdditionsVariadic.swift */; };
+		C17E73611C0F39E8007C155D /* FMDatabaseVariadic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E735F1C0F39E8007C155D /* FMDatabaseVariadic.swift */; };
+		C19F536B1C0F3D60002D1327 /* FourthLevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F536A1C0F3D60002D1327 /* FourthLevelData.swift */; };
+		C1C63DAB1C0D375100D6A015 /* MeetingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DA91C0D375100D6A015 /* MeetingCell.swift */; };
+		C1C63DAC1C0D375100D6A015 /* MeetingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1C63DAA1C0D375100D6A015 /* MeetingCell.xib */; };
+		C1C63DAE1C0D3A3100D6A015 /* LastestMeetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DAD1C0D3A3100D6A015 /* LastestMeetingController.swift */; };
+		C1C63DB01C0D402000D6A015 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DAF1C0D402000D6A015 /* Meeting.swift */; };
+		C1C63DB21C0D83B400D6A015 /* CollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DB11C0D83B400D6A015 /* CollectionController.swift */; };
+		C1C63DB41C0D846C00D6A015 /* MedicineCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DB31C0D846C00D6A015 /* MedicineCollectionController.swift */; };
+		C1C63DB61C0D848500D6A015 /* VideoCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DB51C0D848500D6A015 /* VideoCollectionController.swift */; };
+		C1C63DB81C0D849700D6A015 /* MeetingCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DB71C0D849700D6A015 /* MeetingCollectionController.swift */; };
+		C1C63DBA1C0D84AA00D6A015 /* EnterpriseCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DB91C0D84AA00D6A015 /* EnterpriseCollectionController.swift */; };
+		C1E136351C10918800CFF664 /* MedicineDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E136341C10918800CFF664 /* MedicineDetailController.swift */; };
+		C1EEA6321C0C0EAF00B5A3EF /* EnterprisePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEA6311C0C0EAF00B5A3EF /* EnterprisePageController.swift */; };
+		C1EEA6341C0C0F5200B5A3EF /* EnterpriseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEA6331C0C0F5200B5A3EF /* EnterpriseListController.swift */; };
+		C1EEA6361C0C1B4800B5A3EF /* Enterprises.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEA6351C0C1B4800B5A3EF /* Enterprises.swift */; };
+		C1EEA6381C0C987E00B5A3EF /* PersonalPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEA6371C0C987E00B5A3EF /* PersonalPageController.swift */; };
+		C1EEA63A1C0C9DB400B5A3EF /* PersonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEA6391C0C9DB400B5A3EF /* PersonalCell.swift */; };
+		E5C36CC1615C653E54B41207 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C2594604854FF98FCAFC47 /* Pods.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2801D18AE00697317C85EF04 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		28C2594604854FF98FCAFC47 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		304B464D1123729F3A936311 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		868144F51C1169E600198090 /* FeedbackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
+		868144F61C1169E600198090 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		868144F71C1169E600198090 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		868144F81C1169E600198090 /* RegisterFinishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterFinishController.swift; sourceTree = "<group>"; };
+		868144FD1C11985F00198090 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		868144FF1C11A8AF00198090 /* ModifyCipherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyCipherController.swift; sourceTree = "<group>"; };
+		868145041C11B25600198090 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		868145051C11B25600198090 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		868145071C11B25600198090 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		868145081C11B25600198090 /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
+		868145091C11B25600198090 /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
+		8681450A1C11B25600198090 /* WBHttpRequest+WeiboToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboToken.h"; sourceTree = "<group>"; };
+		8681450B1C11B25600198090 /* WBHttpRequest+WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboUser.h"; sourceTree = "<group>"; };
+		8681450C1C11B25600198090 /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
+		8681450D1C11B25600198090 /* WBSDKBasicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKBasicButton.h; sourceTree = "<group>"; };
+		8681450E1C11B25600198090 /* WBSDKCommentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKCommentButton.h; sourceTree = "<group>"; };
+		8681450F1C11B25600198090 /* WBSDKRelationshipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKRelationshipButton.h; sourceTree = "<group>"; };
+		868145101C11B25600198090 /* WeiboSDK+Statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK+Statistics.h"; sourceTree = "<group>"; };
+		868145111C11B25600198090 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		868145121C11B25600198090 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		868145131C11B25600198090 /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
+		868145151C11B25600198090 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		868145161C11B25600198090 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		868145171C11B25600198090 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		868145181C11B25600198090 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		868145191C11B25600198090 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		8681451A1C11B25600198090 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		8681451B1C11B25600198090 /* ShareSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDK.bundle; sourceTree = "<group>"; };
+		8681451C1C11B25600198090 /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
+		8681451D1C11B25600198090 /* ShareSDKConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConnector.framework; sourceTree = "<group>"; };
+		8681451E1C11B25600198090 /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
+		8681451F1C11B25600198090 /* ShareSDKInterfaceAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKInterfaceAdapter.framework; sourceTree = "<group>"; };
+		868145201C11B25600198090 /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
+		868145211C11B25600198090 /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKUI.framework; sourceTree = "<group>"; };
+		868145301C11B3A500198090 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
+		868145311C11B3A500198090 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		868145341C11B3AF00198090 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		868145361C11B3C000198090 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		868145381C11B3D000198090 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		8681453A1C11B3DB00198090 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		8681453C1C11B3FF00198090 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		8681453E1C11BD4800198090 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		868145401C12DC8400198090 /* ForgetCipherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetCipherController.swift; sourceTree = "<group>"; };
+		868145421C12DD6300198090 /* ResetCipherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetCipherController.swift; sourceTree = "<group>"; };
+		868145441C12E5DF00198090 /* AboutUsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsController.swift; sourceTree = "<group>"; };
+		C109850D1C0F263000CB946C /* MedicineDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineDB.swift; sourceTree = "<group>"; };
+		C10985101C0F27A500CB946C /* SecondLevelMedicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondLevelMedicine.swift; sourceTree = "<group>"; };
+		C10985121C0F34B800CB946C /* MedicineSQLite.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MedicineSQLite.db; sourceTree = "<group>"; };
+		C13D56111C0ACCA9005E9C32 /* YiYaoHui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YiYaoHui.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C13D56141C0ACCA9005E9C32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C13D56191C0ACCA9005E9C32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C13D561B1C0ACCA9005E9C32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C13D561E1C0ACCA9005E9C32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C13D56201C0ACCA9005E9C32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C13D562F1C0ACEC6005E9C32 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
+		C13D56341C0AF8F5005E9C32 /* OptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
+		C15C92531C0BD7DA0041EC73 /* MedicineListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineListController.swift; sourceTree = "<group>"; };
+		C15C92751C0BF7110041EC73 /* MedicinePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinePageController.swift; sourceTree = "<group>"; };
+		C15C92771C0C08F70041EC73 /* YiYaoHui-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YiYaoHui-Bridging-Header.h"; sourceTree = "<group>"; };
+		C15C92781C0C08F80041EC73 /* NSObject+Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Bridge.h"; sourceTree = "<group>"; };
+		C15C92791C0C08F80041EC73 /* NSObject+Bridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Bridge.m"; sourceTree = "<group>"; };
+		C15C92A51C0C0B820041EC73 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C16ABF741C0FE10A007AAE28 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		C16ABF761C0FF057007AAE28 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		C16ABF781C0FF171007AAE28 /* LastLevelMedicineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastLevelMedicineController.swift; sourceTree = "<group>"; };
+		C17E734D1C0F399E007C155D /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		C17E734E1C0F399E007C155D /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		C17E734F1C0F399E007C155D /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		C17E73501C0F399E007C155D /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		C17E73511C0F399E007C155D /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		C17E73521C0F399E007C155D /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		C17E73531C0F399E007C155D /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		C17E73541C0F399E007C155D /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		C17E73551C0F399E007C155D /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		C17E73561C0F399E007C155D /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		C17E73571C0F399E007C155D /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		C17E735E1C0F39E8007C155D /* FMDatabaseAdditionsVariadic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDatabaseAdditionsVariadic.swift; sourceTree = "<group>"; };
+		C17E735F1C0F39E8007C155D /* FMDatabaseVariadic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDatabaseVariadic.swift; sourceTree = "<group>"; };
+		C19F536A1C0F3D60002D1327 /* FourthLevelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthLevelData.swift; sourceTree = "<group>"; };
+		C1C63DA91C0D375100D6A015 /* MeetingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingCell.swift; sourceTree = "<group>"; };
+		C1C63DAA1C0D375100D6A015 /* MeetingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeetingCell.xib; sourceTree = "<group>"; };
+		C1C63DAD1C0D3A3100D6A015 /* LastestMeetingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastestMeetingController.swift; sourceTree = "<group>"; };
+		C1C63DAF1C0D402000D6A015 /* Meeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		C1C63DB11C0D83B400D6A015 /* CollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionController.swift; sourceTree = "<group>"; };
+		C1C63DB31C0D846C00D6A015 /* MedicineCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineCollectionController.swift; sourceTree = "<group>"; };
+		C1C63DB51C0D848500D6A015 /* VideoCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionController.swift; sourceTree = "<group>"; };
+		C1C63DB71C0D849700D6A015 /* MeetingCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingCollectionController.swift; sourceTree = "<group>"; };
+		C1C63DB91C0D84AA00D6A015 /* EnterpriseCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseCollectionController.swift; sourceTree = "<group>"; };
+		C1E136341C10918800CFF664 /* MedicineDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineDetailController.swift; sourceTree = "<group>"; };
+		C1EEA6311C0C0EAF00B5A3EF /* EnterprisePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterprisePageController.swift; sourceTree = "<group>"; };
+		C1EEA6331C0C0F5200B5A3EF /* EnterpriseListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseListController.swift; sourceTree = "<group>"; };
+		C1EEA6351C0C1B4800B5A3EF /* Enterprises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enterprises.swift; sourceTree = "<group>"; };
+		C1EEA6371C0C987E00B5A3EF /* PersonalPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalPageController.swift; sourceTree = "<group>"; };
+		C1EEA6391C0C9DB400B5A3EF /* PersonalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C13D560E1C0ACCA9005E9C32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8681453F1C11BD4800198090 /* libc++.1.tbd in Frameworks */,
+				8681453D1C11B3FF00198090 /* libsqlite3.0.tbd in Frameworks */,
+				8681453B1C11B3DB00198090 /* AdSupport.framework in Frameworks */,
+				868145391C11B3D000198090 /* ImageIO.framework in Frameworks */,
+				868145371C11B3C000198090 /* JavaScriptCore.framework in Frameworks */,
+				868145351C11B3AF00198090 /* libz.1.1.3.tbd in Frameworks */,
+				868145321C11B3A500198090 /* libicucore.A.tbd in Frameworks */,
+				8681452F1C11B25600198090 /* ShareSDKUI.framework in Frameworks */,
+				868145281C11B25600198090 /* MOBFoundation.framework in Frameworks */,
+				C15C92A71C0C0BB10041EC73 /* libsqlite3.tbd in Frameworks */,
+				8681452A1C11B25600198090 /* ShareSDK.framework in Frameworks */,
+				8681452D1C11B25600198090 /* ShareSDKInterfaceAdapter.framework in Frameworks */,
+				868145221C11B25600198090 /* TencentOpenAPI.framework in Frameworks */,
+				E5C36CC1615C653E54B41207 /* Pods.framework in Frameworks */,
+				868145241C11B25600198090 /* libWeiboSDK.a in Frameworks */,
+				868145261C11B25600198090 /* libWeChatSDK.a in Frameworks */,
+				8681452B1C11B25600198090 /* ShareSDKConnector.framework in Frameworks */,
+				8681452C1C11B25600198090 /* ShareSDKExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		437827E8B49813CC9340520C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2801D18AE00697317C85EF04 /* Pods.debug.xcconfig */,
+				304B464D1123729F3A936311 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		868145011C11B25600198090 /* libraries */ = {
+			isa = PBXGroup;
+			children = (
+				868145021C11B25600198090 /* extends */,
+				8681451A1C11B25600198090 /* MOBFoundation.framework */,
+				8681451B1C11B25600198090 /* ShareSDK.bundle */,
+				8681451C1C11B25600198090 /* ShareSDK.framework */,
+				8681451D1C11B25600198090 /* ShareSDKConnector.framework */,
+				8681451E1C11B25600198090 /* ShareSDKExtension.framework */,
+				8681451F1C11B25600198090 /* ShareSDKInterfaceAdapter.framework */,
+				868145201C11B25600198090 /* ShareSDKUI.bundle */,
+				868145211C11B25600198090 /* ShareSDKUI.framework */,
+			);
+			path = libraries;
+			sourceTree = "<group>";
+		};
+		868145021C11B25600198090 /* extends */ = {
+			isa = PBXGroup;
+			children = (
+				868145031C11B25600198090 /* QQSDK */,
+				868145061C11B25600198090 /* SinaWeiboSDK */,
+				868145141C11B25600198090 /* WeChatSDK */,
+			);
+			path = extends;
+			sourceTree = "<group>";
+		};
+		868145031C11B25600198090 /* QQSDK */ = {
+			isa = PBXGroup;
+			children = (
+				868145041C11B25600198090 /* TencentOpenAPI.framework */,
+				868145051C11B25600198090 /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			path = QQSDK;
+			sourceTree = "<group>";
+		};
+		868145061C11B25600198090 /* SinaWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				868145071C11B25600198090 /* libWeiboSDK.a */,
+				868145081C11B25600198090 /* WBHttpRequest+WeiboGame.h */,
+				868145091C11B25600198090 /* WBHttpRequest+WeiboShare.h */,
+				8681450A1C11B25600198090 /* WBHttpRequest+WeiboToken.h */,
+				8681450B1C11B25600198090 /* WBHttpRequest+WeiboUser.h */,
+				8681450C1C11B25600198090 /* WBHttpRequest.h */,
+				8681450D1C11B25600198090 /* WBSDKBasicButton.h */,
+				8681450E1C11B25600198090 /* WBSDKCommentButton.h */,
+				8681450F1C11B25600198090 /* WBSDKRelationshipButton.h */,
+				868145101C11B25600198090 /* WeiboSDK+Statistics.h */,
+				868145111C11B25600198090 /* WeiboSDK.bundle */,
+				868145121C11B25600198090 /* WeiboSDK.h */,
+				868145131C11B25600198090 /* WeiboUser.h */,
+			);
+			path = SinaWeiboSDK;
+			sourceTree = "<group>";
+		};
+		868145141C11B25600198090 /* WeChatSDK */ = {
+			isa = PBXGroup;
+			children = (
+				868145151C11B25600198090 /* libWeChatSDK.a */,
+				868145161C11B25600198090 /* read_me.txt */,
+				868145171C11B25600198090 /* WechatAuthSDK.h */,
+				868145181C11B25600198090 /* WXApi.h */,
+				868145191C11B25600198090 /* WXApiObject.h */,
+			);
+			path = WeChatSDK;
+			sourceTree = "<group>";
+		};
+		A849C5D92774F344FC81EE66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8681453E1C11BD4800198090 /* libc++.1.tbd */,
+				8681453C1C11B3FF00198090 /* libsqlite3.0.tbd */,
+				8681453A1C11B3DB00198090 /* AdSupport.framework */,
+				868145381C11B3D000198090 /* ImageIO.framework */,
+				868145361C11B3C000198090 /* JavaScriptCore.framework */,
+				868145341C11B3AF00198090 /* libz.1.1.3.tbd */,
+				868145301C11B3A500198090 /* libicucore.A.tbd */,
+				868145311C11B3A500198090 /* libicucore.tbd */,
+				C15C92A51C0C0B820041EC73 /* libsqlite3.tbd */,
+				28C2594604854FF98FCAFC47 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C109850F1C0F276C00CB946C /* MedicineLevelData */ = {
+			isa = PBXGroup;
+			children = (
+				C10985101C0F27A500CB946C /* SecondLevelMedicine.swift */,
+				C19F536A1C0F3D60002D1327 /* FourthLevelData.swift */,
+			);
+			name = MedicineLevelData;
+			sourceTree = "<group>";
+		};
+		C13D56081C0ACCA8005E9C32 = {
+			isa = PBXGroup;
+			children = (
+				C13D56131C0ACCA9005E9C32 /* YiYaoHui */,
+				C13D56121C0ACCA9005E9C32 /* Products */,
+				437827E8B49813CC9340520C /* Pods */,
+				A849C5D92774F344FC81EE66 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C13D56121C0ACCA9005E9C32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C13D56111C0ACCA9005E9C32 /* YiYaoHui.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C13D56131C0ACCA9005E9C32 /* YiYaoHui */ = {
+			isa = PBXGroup;
+			children = (
+				C15C927B1C0C0A2D0041EC73 /* Library */,
+				C13D56281C0ACCCD005E9C32 /* View */,
+				C13D56271C0ACCC3005E9C32 /* Controller */,
+				C13D56261C0ACCB5005E9C32 /* DataModel */,
+				C13D56291C0ACCD4005E9C32 /* Storyboard */,
+				C13D562A1C0ACCDF005E9C32 /* Other */,
+				C13D56201C0ACCA9005E9C32 /* Info.plist */,
+				C15C92781C0C08F80041EC73 /* NSObject+Bridge.h */,
+				C15C92791C0C08F80041EC73 /* NSObject+Bridge.m */,
+				C15C92771C0C08F70041EC73 /* YiYaoHui-Bridging-Header.h */,
+			);
+			path = YiYaoHui;
+			sourceTree = "<group>";
+		};
+		C13D56261C0ACCB5005E9C32 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				C109850F1C0F276C00CB946C /* MedicineLevelData */,
+				C1EEA6351C0C1B4800B5A3EF /* Enterprises.swift */,
+				C1C63DAF1C0D402000D6A015 /* Meeting.swift */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		C13D56271C0ACCC3005E9C32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C13D562B1C0ACE68005E9C32 /* HomePage */,
+				C13D562C1C0ACE71005E9C32 /* MedicinePage */,
+				C13D562D1C0ACE85005E9C32 /* EnterprisePage */,
+				C13D562E1C0ACE92005E9C32 /* PersonalPage */,
+				C13D56311C0AD097005E9C32 /* OtherPage */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C13D56281C0ACCCD005E9C32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C13D56341C0AF8F5005E9C32 /* OptionCell.swift */,
+				C1EEA6391C0C9DB400B5A3EF /* PersonalCell.swift */,
+				C1C63DA91C0D375100D6A015 /* MeetingCell.swift */,
+				C16ABF741C0FE10A007AAE28 /* HeaderCell.swift */,
+				C16ABF761C0FF057007AAE28 /* DetailCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C13D56291C0ACCD4005E9C32 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C10985121C0F34B800CB946C /* MedicineSQLite.db */,
+				C13D56181C0ACCA9005E9C32 /* Main.storyboard */,
+				C13D561D1C0ACCA9005E9C32 /* LaunchScreen.storyboard */,
+				C1C63DAA1C0D375100D6A015 /* MeetingCell.xib */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		C13D562A1C0ACCDF005E9C32 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C13D56141C0ACCA9005E9C32 /* AppDelegate.swift */,
+				C13D561B1C0ACCA9005E9C32 /* Assets.xcassets */,
+				C109850D1C0F263000CB946C /* MedicineDB.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		C13D562B1C0ACE68005E9C32 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				C13D562F1C0ACEC6005E9C32 /* HomePageController.swift */,
+				C1C63DAD1C0D3A3100D6A015 /* LastestMeetingController.swift */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
+		C13D562C1C0ACE71005E9C32 /* MedicinePage */ = {
+			isa = PBXGroup;
+			children = (
+				C15C92751C0BF7110041EC73 /* MedicinePageController.swift */,
+				C15C92531C0BD7DA0041EC73 /* MedicineListController.swift */,
+				C16ABF781C0FF171007AAE28 /* LastLevelMedicineController.swift */,
+				C1E136341C10918800CFF664 /* MedicineDetailController.swift */,
+			);
+			name = MedicinePage;
+			sourceTree = "<group>";
+		};
+		C13D562D1C0ACE85005E9C32 /* EnterprisePage */ = {
+			isa = PBXGroup;
+			children = (
+				C1EEA6311C0C0EAF00B5A3EF /* EnterprisePageController.swift */,
+				C1EEA6331C0C0F5200B5A3EF /* EnterpriseListController.swift */,
+			);
+			name = EnterprisePage;
+			sourceTree = "<group>";
+		};
+		C13D562E1C0ACE92005E9C32 /* PersonalPage */ = {
+			isa = PBXGroup;
+			children = (
+				C1EEA6371C0C987E00B5A3EF /* PersonalPageController.swift */,
+				C1C63DB11C0D83B400D6A015 /* CollectionController.swift */,
+				C1C63DB31C0D846C00D6A015 /* MedicineCollectionController.swift */,
+				C1C63DB51C0D848500D6A015 /* VideoCollectionController.swift */,
+				C1C63DB71C0D849700D6A015 /* MeetingCollectionController.swift */,
+				C1C63DB91C0D84AA00D6A015 /* EnterpriseCollectionController.swift */,
+				868144F51C1169E600198090 /* FeedbackController.swift */,
+				868144F61C1169E600198090 /* LoginController.swift */,
+				868144F71C1169E600198090 /* RegisterController.swift */,
+				868144F81C1169E600198090 /* RegisterFinishController.swift */,
+				868144FD1C11985F00198090 /* SettingController.swift */,
+				868144FF1C11A8AF00198090 /* ModifyCipherController.swift */,
+				868145401C12DC8400198090 /* ForgetCipherController.swift */,
+				868145421C12DD6300198090 /* ResetCipherController.swift */,
+				868145441C12E5DF00198090 /* AboutUsController.swift */,
+			);
+			name = PersonalPage;
+			sourceTree = "<group>";
+		};
+		C13D56311C0AD097005E9C32 /* OtherPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = OtherPage;
+			sourceTree = "<group>";
+		};
+		C15C927B1C0C0A2D0041EC73 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				868145011C11B25600198090 /* libraries */,
+				C15C92901C0C0B3F0041EC73 /* FMDB */,
+				C17E735D1C0F39E8007C155D /* Swift extensions */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		C15C92901C0C0B3F0041EC73 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				C17E734D1C0F399E007C155D /* FMDatabase.h */,
+				C17E734E1C0F399E007C155D /* FMDatabase.m */,
+				C17E734F1C0F399E007C155D /* FMDatabaseAdditions.h */,
+				C17E73501C0F399E007C155D /* FMDatabaseAdditions.m */,
+				C17E73511C0F399E007C155D /* FMDatabasePool.h */,
+				C17E73521C0F399E007C155D /* FMDatabasePool.m */,
+				C17E73531C0F399E007C155D /* FMDatabaseQueue.h */,
+				C17E73541C0F399E007C155D /* FMDatabaseQueue.m */,
+				C17E73551C0F399E007C155D /* FMDB.h */,
+				C17E73561C0F399E007C155D /* FMResultSet.h */,
+				C17E73571C0F399E007C155D /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		C17E735D1C0F39E8007C155D /* Swift extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C17E735E1C0F39E8007C155D /* FMDatabaseAdditionsVariadic.swift */,
+				C17E735F1C0F39E8007C155D /* FMDatabaseVariadic.swift */,
+			);
+			path = "Swift extensions";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C13D56101C0ACCA9005E9C32 /* YiYaoHui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C13D56231C0ACCA9005E9C32 /* Build configuration list for PBXNativeTarget "YiYaoHui" */;
+			buildPhases = (
+				069D4F5CD9541054EF6034F8 /* Check Pods Manifest.lock */,
+				C13D560D1C0ACCA9005E9C32 /* Sources */,
+				C13D560E1C0ACCA9005E9C32 /* Frameworks */,
+				C13D560F1C0ACCA9005E9C32 /* Resources */,
+				92790A9054B0AEAFE291C8FF /* Embed Pods Frameworks */,
+				85B3BE33CE7D4ABBB9292F46 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YiYaoHui;
+			productName = YiYaoHui;
+			productReference = C13D56111C0ACCA9005E9C32 /* YiYaoHui.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C13D56091C0ACCA8005E9C32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = EgeTart;
+				TargetAttributes = {
+					C13D56101C0ACCA9005E9C32 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = D73CRDQ762;
+					};
+				};
+			};
+			buildConfigurationList = C13D560C1C0ACCA8005E9C32 /* Build configuration list for PBXProject "YiYaoHui" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C13D56081C0ACCA8005E9C32;
+			productRefGroup = C13D56121C0ACCA9005E9C32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C13D56101C0ACCA9005E9C32 /* YiYaoHui */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C13D560F1C0ACCA9005E9C32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				868145231C11B25600198090 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				C13D561F1C0ACCA9005E9C32 /* LaunchScreen.storyboard in Resources */,
+				8681452E1C11B25600198090 /* ShareSDKUI.bundle in Resources */,
+				C10985131C0F34B800CB946C /* MedicineSQLite.db in Resources */,
+				C13D561C1C0ACCA9005E9C32 /* Assets.xcassets in Resources */,
+				868145251C11B25600198090 /* WeiboSDK.bundle in Resources */,
+				C13D561A1C0ACCA9005E9C32 /* Main.storyboard in Resources */,
+				868145271C11B25600198090 /* read_me.txt in Resources */,
+				868145291C11B25600198090 /* ShareSDK.bundle in Resources */,
+				C1C63DAC1C0D375100D6A015 /* MeetingCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		069D4F5CD9541054EF6034F8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		85B3BE33CE7D4ABBB9292F46 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92790A9054B0AEAFE291C8FF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C13D560D1C0ACCA9005E9C32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1EEA6361C0C1B4800B5A3EF /* Enterprises.swift in Sources */,
+				C15C927A1C0C08F80041EC73 /* NSObject+Bridge.m in Sources */,
+				C1C63DB81C0D849700D6A015 /* MeetingCollectionController.swift in Sources */,
+				C19F536B1C0F3D60002D1327 /* FourthLevelData.swift in Sources */,
+				C15C92541C0BD7DA0041EC73 /* MedicineListController.swift in Sources */,
+				C1EEA6381C0C987E00B5A3EF /* PersonalPageController.swift in Sources */,
+				C13D56351C0AF8F5005E9C32 /* OptionCell.swift in Sources */,
+				868145451C12E5DF00198090 /* AboutUsController.swift in Sources */,
+				C17E735C1C0F399E007C155D /* FMResultSet.m in Sources */,
+				868144FB1C1169E600198090 /* RegisterController.swift in Sources */,
+				C1C63DB01C0D402000D6A015 /* Meeting.swift in Sources */,
+				C1EEA6341C0C0F5200B5A3EF /* EnterpriseListController.swift in Sources */,
+				868144F91C1169E600198090 /* FeedbackController.swift in Sources */,
+				C1C63DBA1C0D84AA00D6A015 /* EnterpriseCollectionController.swift in Sources */,
+				C17E73611C0F39E8007C155D /* FMDatabaseVariadic.swift in Sources */,
+				C17E73581C0F399E007C155D /* FMDatabase.m in Sources */,
+				C17E735B1C0F399E007C155D /* FMDatabaseQueue.m in Sources */,
+				C1E136351C10918800CFF664 /* MedicineDetailController.swift in Sources */,
+				C17E73591C0F399E007C155D /* FMDatabaseAdditions.m in Sources */,
+				C1EEA63A1C0C9DB400B5A3EF /* PersonalCell.swift in Sources */,
+				868145001C11A8AF00198090 /* ModifyCipherController.swift in Sources */,
+				C16ABF751C0FE10A007AAE28 /* HeaderCell.swift in Sources */,
+				C1C63DAB1C0D375100D6A015 /* MeetingCell.swift in Sources */,
+				C17E735A1C0F399E007C155D /* FMDatabasePool.m in Sources */,
+				868145431C12DD6300198090 /* ResetCipherController.swift in Sources */,
+				C13D56151C0ACCA9005E9C32 /* AppDelegate.swift in Sources */,
+				C1EEA6321C0C0EAF00B5A3EF /* EnterprisePageController.swift in Sources */,
+				C13D56301C0ACEC6005E9C32 /* HomePageController.swift in Sources */,
+				C1C63DB61C0D848500D6A015 /* VideoCollectionController.swift in Sources */,
+				868144FE1C11985F00198090 /* SettingController.swift in Sources */,
+				C15C92761C0BF7110041EC73 /* MedicinePageController.swift in Sources */,
+				C10985111C0F27A500CB946C /* SecondLevelMedicine.swift in Sources */,
+				868144FC1C1169E600198090 /* RegisterFinishController.swift in Sources */,
+				C1C63DAE1C0D3A3100D6A015 /* LastestMeetingController.swift in Sources */,
+				C1C63DB41C0D846C00D6A015 /* MedicineCollectionController.swift in Sources */,
+				C109850E1C0F263000CB946C /* MedicineDB.swift in Sources */,
+				C1C63DB21C0D83B400D6A015 /* CollectionController.swift in Sources */,
+				C16ABF771C0FF057007AAE28 /* DetailCell.swift in Sources */,
+				C16ABF791C0FF171007AAE28 /* LastLevelMedicineController.swift in Sources */,
+				868145411C12DC8400198090 /* ForgetCipherController.swift in Sources */,
+				C17E73601C0F39E8007C155D /* FMDatabaseAdditionsVariadic.swift in Sources */,
+				868144FA1C1169E600198090 /* LoginController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C13D56181C0ACCA9005E9C32 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C13D56191C0ACCA9005E9C32 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C13D561D1C0ACCA9005E9C32 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C13D561E1C0ACCA9005E9C32 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C13D56211C0ACCA9005E9C32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C13D56221C0ACCA9005E9C32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C13D56241C0ACCA9005E9C32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2801D18AE00697317C85EF04 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YiYaoHui/libraries/extends/QQSDK",
+					"$(PROJECT_DIR)/YiYaoHui/libraries",
+				);
+				INFOPLIST_FILE = YiYaoHui/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YiYaoHui/libraries/extends/SinaWeiboSDK",
+					"$(PROJECT_DIR)/YiYaoHui/libraries/extends/WeChatSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.egetart.YiYaoHui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "YiYaoHui/YiYaoHui-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C13D56251C0ACCA9005E9C32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 304B464D1123729F3A936311 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YiYaoHui/libraries/extends/QQSDK",
+					"$(PROJECT_DIR)/YiYaoHui/libraries",
+				);
+				INFOPLIST_FILE = YiYaoHui/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YiYaoHui/libraries/extends/SinaWeiboSDK",
+					"$(PROJECT_DIR)/YiYaoHui/libraries/extends/WeChatSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.egetart.YiYaoHui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "YiYaoHui/YiYaoHui-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C13D560C1C0ACCA8005E9C32 /* Build configuration list for PBXProject "YiYaoHui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C13D56211C0ACCA9005E9C32 /* Debug */,
+				C13D56221C0ACCA9005E9C32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C13D56231C0ACCA9005E9C32 /* Build configuration list for PBXNativeTarget "YiYaoHui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C13D56241C0ACCA9005E9C32 /* Debug */,
+				C13D56251C0ACCA9005E9C32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C13D56091C0ACCA8005E9C32 /* Project object */;
+}
