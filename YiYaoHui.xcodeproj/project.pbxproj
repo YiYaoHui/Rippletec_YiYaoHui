@@ -44,15 +44,9 @@
 		C13D561A1C0ACCA9005E9C32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13D56181C0ACCA9005E9C32 /* Main.storyboard */; };
 		C13D561C1C0ACCA9005E9C32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13D561B1C0ACCA9005E9C32 /* Assets.xcassets */; };
 		C13D561F1C0ACCA9005E9C32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13D561D1C0ACCA9005E9C32 /* LaunchScreen.storyboard */; };
-		C13D56301C0ACEC6005E9C32 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D562F1C0ACEC6005E9C32 /* HomePageController.swift */; };
-		C13D56351C0AF8F5005E9C32 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D56341C0AF8F5005E9C32 /* OptionCell.swift */; };
-		C15C92541C0BD7DA0041EC73 /* MedicineListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15C92531C0BD7DA0041EC73 /* MedicineListController.swift */; };
-		C15C92761C0BF7110041EC73 /* MedicinePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15C92751C0BF7110041EC73 /* MedicinePageController.swift */; };
 		C15C927A1C0C08F80041EC73 /* NSObject+Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C15C92791C0C08F80041EC73 /* NSObject+Bridge.m */; };
 		C15C92A71C0C0BB10041EC73 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C15C92A51C0C0B820041EC73 /* libsqlite3.tbd */; };
 		C16ABF751C0FE10A007AAE28 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16ABF741C0FE10A007AAE28 /* HeaderCell.swift */; };
-		C16ABF771C0FF057007AAE28 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16ABF761C0FF057007AAE28 /* DetailCell.swift */; };
-		C16ABF791C0FF171007AAE28 /* LastLevelMedicineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16ABF781C0FF171007AAE28 /* LastLevelMedicineController.swift */; };
 		C17E73581C0F399E007C155D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E734E1C0F399E007C155D /* FMDatabase.m */; };
 		C17E73591C0F399E007C155D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E73501C0F399E007C155D /* FMDatabaseAdditions.m */; };
 		C17E735A1C0F399E007C155D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E73521C0F399E007C155D /* FMDatabasePool.m */; };
@@ -60,22 +54,30 @@
 		C17E735C1C0F399E007C155D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E73571C0F399E007C155D /* FMResultSet.m */; };
 		C17E73601C0F39E8007C155D /* FMDatabaseAdditionsVariadic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E735E1C0F39E8007C155D /* FMDatabaseAdditionsVariadic.swift */; };
 		C17E73611C0F39E8007C155D /* FMDatabaseVariadic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E735F1C0F39E8007C155D /* FMDatabaseVariadic.swift */; };
+		C1960C8D1C1334B400FDBA09 /* EnterprisePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1960C891C1334B400FDBA09 /* EnterprisePageController.swift */; };
+		C1960C8E1C1334B400FDBA09 /* EnterpriseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1960C8A1C1334B400FDBA09 /* EnterpriseListController.swift */; };
+		C1960C8F1C1334B400FDBA09 /* SingleEnterpriseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1960C8B1C1334B400FDBA09 /* SingleEnterpriseController.swift */; };
+		C1960C901C1334B400FDBA09 /* EnterpriseHomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1960C8C1C1334B400FDBA09 /* EnterpriseHomePageController.swift */; };
+		C1960C921C13350000FDBA09 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1960C911C13350000FDBA09 /* OptionCell.swift */; };
 		C19F536B1C0F3D60002D1327 /* FourthLevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F536A1C0F3D60002D1327 /* FourthLevelData.swift */; };
 		C1C63DAB1C0D375100D6A015 /* MeetingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DA91C0D375100D6A015 /* MeetingCell.swift */; };
 		C1C63DAC1C0D375100D6A015 /* MeetingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1C63DAA1C0D375100D6A015 /* MeetingCell.xib */; };
-		C1C63DAE1C0D3A3100D6A015 /* LastestMeetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DAD1C0D3A3100D6A015 /* LastestMeetingController.swift */; };
 		C1C63DB01C0D402000D6A015 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DAF1C0D402000D6A015 /* Meeting.swift */; };
 		C1C63DB21C0D83B400D6A015 /* CollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DB11C0D83B400D6A015 /* CollectionController.swift */; };
 		C1C63DB41C0D846C00D6A015 /* MedicineCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DB31C0D846C00D6A015 /* MedicineCollectionController.swift */; };
 		C1C63DB61C0D848500D6A015 /* VideoCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DB51C0D848500D6A015 /* VideoCollectionController.swift */; };
 		C1C63DB81C0D849700D6A015 /* MeetingCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DB71C0D849700D6A015 /* MeetingCollectionController.swift */; };
 		C1C63DBA1C0D84AA00D6A015 /* EnterpriseCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C63DB91C0D84AA00D6A015 /* EnterpriseCollectionController.swift */; };
-		C1E136351C10918800CFF664 /* MedicineDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E136341C10918800CFF664 /* MedicineDetailController.swift */; };
-		C1EEA6321C0C0EAF00B5A3EF /* EnterprisePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEA6311C0C0EAF00B5A3EF /* EnterprisePageController.swift */; };
-		C1EEA6341C0C0F5200B5A3EF /* EnterpriseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEA6331C0C0F5200B5A3EF /* EnterpriseListController.swift */; };
 		C1EEA6361C0C1B4800B5A3EF /* Enterprises.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEA6351C0C1B4800B5A3EF /* Enterprises.swift */; };
 		C1EEA6381C0C987E00B5A3EF /* PersonalPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEA6371C0C987E00B5A3EF /* PersonalPageController.swift */; };
 		C1EEA63A1C0C9DB400B5A3EF /* PersonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EEA6391C0C9DB400B5A3EF /* PersonalCell.swift */; };
+		C1F95F991C13E34A00F50A0A /* MedicinePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95F951C13E34A00F50A0A /* MedicinePageController.swift */; };
+		C1F95F9A1C13E34A00F50A0A /* MedicineListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95F961C13E34A00F50A0A /* MedicineListController.swift */; };
+		C1F95F9B1C13E34A00F50A0A /* LastLevelMedicineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95F971C13E34A00F50A0A /* LastLevelMedicineController.swift */; };
+		C1F95F9C1C13E34A00F50A0A /* MedicineDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95F981C13E34A00F50A0A /* MedicineDetailController.swift */; };
+		C1F95F9E1C13E38700F50A0A /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95F9D1C13E38700F50A0A /* DetailCell.swift */; };
+		C1F95FA11C13E52A00F50A0A /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95F9F1C13E52A00F50A0A /* HomePageController.swift */; };
+		C1F95FA21C13E52A00F50A0A /* LastestMeetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F95FA01C13E52A00F50A0A /* LastestMeetingController.swift */; };
 		E5C36CC1615C653E54B41207 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C2594604854FF98FCAFC47 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,17 +139,11 @@
 		C13D561B1C0ACCA9005E9C32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C13D561E1C0ACCA9005E9C32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C13D56201C0ACCA9005E9C32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C13D562F1C0ACEC6005E9C32 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
-		C13D56341C0AF8F5005E9C32 /* OptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
-		C15C92531C0BD7DA0041EC73 /* MedicineListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineListController.swift; sourceTree = "<group>"; };
-		C15C92751C0BF7110041EC73 /* MedicinePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinePageController.swift; sourceTree = "<group>"; };
 		C15C92771C0C08F70041EC73 /* YiYaoHui-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YiYaoHui-Bridging-Header.h"; sourceTree = "<group>"; };
 		C15C92781C0C08F80041EC73 /* NSObject+Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Bridge.h"; sourceTree = "<group>"; };
 		C15C92791C0C08F80041EC73 /* NSObject+Bridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Bridge.m"; sourceTree = "<group>"; };
 		C15C92A51C0C0B820041EC73 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		C16ABF741C0FE10A007AAE28 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
-		C16ABF761C0FF057007AAE28 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
-		C16ABF781C0FF171007AAE28 /* LastLevelMedicineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastLevelMedicineController.swift; sourceTree = "<group>"; };
 		C17E734D1C0F399E007C155D /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		C17E734E1C0F399E007C155D /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		C17E734F1C0F399E007C155D /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -161,22 +157,30 @@
 		C17E73571C0F399E007C155D /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		C17E735E1C0F39E8007C155D /* FMDatabaseAdditionsVariadic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDatabaseAdditionsVariadic.swift; sourceTree = "<group>"; };
 		C17E735F1C0F39E8007C155D /* FMDatabaseVariadic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDatabaseVariadic.swift; sourceTree = "<group>"; };
+		C1960C891C1334B400FDBA09 /* EnterprisePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterprisePageController.swift; sourceTree = "<group>"; };
+		C1960C8A1C1334B400FDBA09 /* EnterpriseListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseListController.swift; sourceTree = "<group>"; };
+		C1960C8B1C1334B400FDBA09 /* SingleEnterpriseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleEnterpriseController.swift; sourceTree = "<group>"; };
+		C1960C8C1C1334B400FDBA09 /* EnterpriseHomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseHomePageController.swift; sourceTree = "<group>"; };
+		C1960C911C13350000FDBA09 /* OptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
 		C19F536A1C0F3D60002D1327 /* FourthLevelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthLevelData.swift; sourceTree = "<group>"; };
 		C1C63DA91C0D375100D6A015 /* MeetingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingCell.swift; sourceTree = "<group>"; };
 		C1C63DAA1C0D375100D6A015 /* MeetingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeetingCell.xib; sourceTree = "<group>"; };
-		C1C63DAD1C0D3A3100D6A015 /* LastestMeetingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastestMeetingController.swift; sourceTree = "<group>"; };
 		C1C63DAF1C0D402000D6A015 /* Meeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
 		C1C63DB11C0D83B400D6A015 /* CollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionController.swift; sourceTree = "<group>"; };
 		C1C63DB31C0D846C00D6A015 /* MedicineCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineCollectionController.swift; sourceTree = "<group>"; };
 		C1C63DB51C0D848500D6A015 /* VideoCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionController.swift; sourceTree = "<group>"; };
 		C1C63DB71C0D849700D6A015 /* MeetingCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingCollectionController.swift; sourceTree = "<group>"; };
 		C1C63DB91C0D84AA00D6A015 /* EnterpriseCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseCollectionController.swift; sourceTree = "<group>"; };
-		C1E136341C10918800CFF664 /* MedicineDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineDetailController.swift; sourceTree = "<group>"; };
-		C1EEA6311C0C0EAF00B5A3EF /* EnterprisePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterprisePageController.swift; sourceTree = "<group>"; };
-		C1EEA6331C0C0F5200B5A3EF /* EnterpriseListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseListController.swift; sourceTree = "<group>"; };
 		C1EEA6351C0C1B4800B5A3EF /* Enterprises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enterprises.swift; sourceTree = "<group>"; };
 		C1EEA6371C0C987E00B5A3EF /* PersonalPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalPageController.swift; sourceTree = "<group>"; };
 		C1EEA6391C0C9DB400B5A3EF /* PersonalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCell.swift; sourceTree = "<group>"; };
+		C1F95F951C13E34A00F50A0A /* MedicinePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicinePageController.swift; sourceTree = "<group>"; };
+		C1F95F961C13E34A00F50A0A /* MedicineListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineListController.swift; sourceTree = "<group>"; };
+		C1F95F971C13E34A00F50A0A /* LastLevelMedicineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastLevelMedicineController.swift; sourceTree = "<group>"; };
+		C1F95F981C13E34A00F50A0A /* MedicineDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineDetailController.swift; sourceTree = "<group>"; };
+		C1F95F9D1C13E38700F50A0A /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		C1F95F9F1C13E52A00F50A0A /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
+		C1F95FA01C13E52A00F50A0A /* LastestMeetingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastestMeetingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,11 +374,11 @@
 		C13D56281C0ACCCD005E9C32 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C13D56341C0AF8F5005E9C32 /* OptionCell.swift */,
+				C1960C911C13350000FDBA09 /* OptionCell.swift */,
 				C1EEA6391C0C9DB400B5A3EF /* PersonalCell.swift */,
 				C1C63DA91C0D375100D6A015 /* MeetingCell.swift */,
 				C16ABF741C0FE10A007AAE28 /* HeaderCell.swift */,
-				C16ABF761C0FF057007AAE28 /* DetailCell.swift */,
+				C1F95F9D1C13E38700F50A0A /* DetailCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -403,8 +407,8 @@
 		C13D562B1C0ACE68005E9C32 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				C13D562F1C0ACEC6005E9C32 /* HomePageController.swift */,
-				C1C63DAD1C0D3A3100D6A015 /* LastestMeetingController.swift */,
+				C1F95F9F1C13E52A00F50A0A /* HomePageController.swift */,
+				C1F95FA01C13E52A00F50A0A /* LastestMeetingController.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -412,10 +416,10 @@
 		C13D562C1C0ACE71005E9C32 /* MedicinePage */ = {
 			isa = PBXGroup;
 			children = (
-				C15C92751C0BF7110041EC73 /* MedicinePageController.swift */,
-				C15C92531C0BD7DA0041EC73 /* MedicineListController.swift */,
-				C16ABF781C0FF171007AAE28 /* LastLevelMedicineController.swift */,
-				C1E136341C10918800CFF664 /* MedicineDetailController.swift */,
+				C1F95F951C13E34A00F50A0A /* MedicinePageController.swift */,
+				C1F95F961C13E34A00F50A0A /* MedicineListController.swift */,
+				C1F95F971C13E34A00F50A0A /* LastLevelMedicineController.swift */,
+				C1F95F981C13E34A00F50A0A /* MedicineDetailController.swift */,
 			);
 			name = MedicinePage;
 			sourceTree = "<group>";
@@ -423,8 +427,10 @@
 		C13D562D1C0ACE85005E9C32 /* EnterprisePage */ = {
 			isa = PBXGroup;
 			children = (
-				C1EEA6311C0C0EAF00B5A3EF /* EnterprisePageController.swift */,
-				C1EEA6331C0C0F5200B5A3EF /* EnterpriseListController.swift */,
+				C1960C891C1334B400FDBA09 /* EnterprisePageController.swift */,
+				C1960C8A1C1334B400FDBA09 /* EnterpriseListController.swift */,
+				C1960C8B1C1334B400FDBA09 /* SingleEnterpriseController.swift */,
+				C1960C8C1C1334B400FDBA09 /* EnterpriseHomePageController.swift */,
 			);
 			name = EnterprisePage;
 			sourceTree = "<group>";
@@ -629,21 +635,22 @@
 				C15C927A1C0C08F80041EC73 /* NSObject+Bridge.m in Sources */,
 				C1C63DB81C0D849700D6A015 /* MeetingCollectionController.swift in Sources */,
 				C19F536B1C0F3D60002D1327 /* FourthLevelData.swift in Sources */,
-				C15C92541C0BD7DA0041EC73 /* MedicineListController.swift in Sources */,
 				C1EEA6381C0C987E00B5A3EF /* PersonalPageController.swift in Sources */,
-				C13D56351C0AF8F5005E9C32 /* OptionCell.swift in Sources */,
+				C1960C8E1C1334B400FDBA09 /* EnterpriseListController.swift in Sources */,
 				868145451C12E5DF00198090 /* AboutUsController.swift in Sources */,
+				C1F95F9B1C13E34A00F50A0A /* LastLevelMedicineController.swift in Sources */,
 				C17E735C1C0F399E007C155D /* FMResultSet.m in Sources */,
 				868144FB1C1169E600198090 /* RegisterController.swift in Sources */,
 				C1C63DB01C0D402000D6A015 /* Meeting.swift in Sources */,
-				C1EEA6341C0C0F5200B5A3EF /* EnterpriseListController.swift in Sources */,
+				C1960C901C1334B400FDBA09 /* EnterpriseHomePageController.swift in Sources */,
 				868144F91C1169E600198090 /* FeedbackController.swift in Sources */,
 				C1C63DBA1C0D84AA00D6A015 /* EnterpriseCollectionController.swift in Sources */,
+				C1F95F9C1C13E34A00F50A0A /* MedicineDetailController.swift in Sources */,
 				C17E73611C0F39E8007C155D /* FMDatabaseVariadic.swift in Sources */,
 				C17E73581C0F399E007C155D /* FMDatabase.m in Sources */,
 				C17E735B1C0F399E007C155D /* FMDatabaseQueue.m in Sources */,
-				C1E136351C10918800CFF664 /* MedicineDetailController.swift in Sources */,
 				C17E73591C0F399E007C155D /* FMDatabaseAdditions.m in Sources */,
+				C1960C8D1C1334B400FDBA09 /* EnterprisePageController.swift in Sources */,
 				C1EEA63A1C0C9DB400B5A3EF /* PersonalCell.swift in Sources */,
 				868145001C11A8AF00198090 /* ModifyCipherController.swift in Sources */,
 				C16ABF751C0FE10A007AAE28 /* HeaderCell.swift in Sources */,
@@ -651,19 +658,20 @@
 				C17E735A1C0F399E007C155D /* FMDatabasePool.m in Sources */,
 				868145431C12DD6300198090 /* ResetCipherController.swift in Sources */,
 				C13D56151C0ACCA9005E9C32 /* AppDelegate.swift in Sources */,
-				C1EEA6321C0C0EAF00B5A3EF /* EnterprisePageController.swift in Sources */,
-				C13D56301C0ACEC6005E9C32 /* HomePageController.swift in Sources */,
+				C1960C921C13350000FDBA09 /* OptionCell.swift in Sources */,
 				C1C63DB61C0D848500D6A015 /* VideoCollectionController.swift in Sources */,
+				C1F95FA11C13E52A00F50A0A /* HomePageController.swift in Sources */,
+				C1F95FA21C13E52A00F50A0A /* LastestMeetingController.swift in Sources */,
 				868144FE1C11985F00198090 /* SettingController.swift in Sources */,
-				C15C92761C0BF7110041EC73 /* MedicinePageController.swift in Sources */,
+				C1960C8F1C1334B400FDBA09 /* SingleEnterpriseController.swift in Sources */,
 				C10985111C0F27A500CB946C /* SecondLevelMedicine.swift in Sources */,
 				868144FC1C1169E600198090 /* RegisterFinishController.swift in Sources */,
-				C1C63DAE1C0D3A3100D6A015 /* LastestMeetingController.swift in Sources */,
+				C1F95F9E1C13E38700F50A0A /* DetailCell.swift in Sources */,
 				C1C63DB41C0D846C00D6A015 /* MedicineCollectionController.swift in Sources */,
 				C109850E1C0F263000CB946C /* MedicineDB.swift in Sources */,
+				C1F95F9A1C13E34A00F50A0A /* MedicineListController.swift in Sources */,
 				C1C63DB21C0D83B400D6A015 /* CollectionController.swift in Sources */,
-				C16ABF771C0FF057007AAE28 /* DetailCell.swift in Sources */,
-				C16ABF791C0FF171007AAE28 /* LastLevelMedicineController.swift in Sources */,
+				C1F95F991C13E34A00F50A0A /* MedicinePageController.swift in Sources */,
 				868145411C12DC8400198090 /* ForgetCipherController.swift in Sources */,
 				C17E73601C0F39E8007C155D /* FMDatabaseAdditionsVariadic.swift in Sources */,
 				868144FA1C1169E600198090 /* LoginController.swift in Sources */,

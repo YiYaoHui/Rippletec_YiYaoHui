@@ -30,6 +30,7 @@ class EnterpriseListController: UIViewController {
         enterpriseTableView.sectionIndexColor = UIColor.blackColor()
         
         enterpriseTableView.tableFooterView = UIView(frame: CGRectZero)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -97,6 +98,10 @@ extension EnterpriseListController: UITableViewDelegate {
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.textLabel?.textColor = UIColor(red: 48.0 / 255, green: 48.0 / 255, blue: 48.0 / 255, alpha: 1.0)
         cell.textLabel?.font = UIFont(name: "Helvetical Neue", size: 18)
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("toEnterprise", sender: self)
     }
 
 }

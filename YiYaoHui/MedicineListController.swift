@@ -104,8 +104,8 @@ extension MedicineListController: UITableViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toLastLevel" {
             let destinationVC = segue.destinationViewController as! LastLevelMedicineController
-                destinationVC.medicineType = medicineType
-                destinationVC.medicineParentID = selectedMedicine.id
+            destinationVC.medicineType = medicineType
+            destinationVC.medicineParentID = selectedMedicine.id
         }
     }
     
