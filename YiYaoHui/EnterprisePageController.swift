@@ -42,6 +42,8 @@ class EnterprisePageController: UIViewController {
         // Do any additional setup after loading the view.
         //title = "企业"
         
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        
         pageController = UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.Scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.Horizontal, options: nil)
         pageController.dataSource = self
         

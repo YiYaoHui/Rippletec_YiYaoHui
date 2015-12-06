@@ -13,6 +13,8 @@ class LastLevelMedicineController: UIViewController {
     
     @IBOutlet weak var lastLevelTableView: UITableView!
     
+    @IBOutlet weak var titleItme: UINavigationItem!
+    
     var medicineType = ""
     var medicineParentID = ""
     
@@ -84,7 +86,19 @@ extension LastLevelMedicineController: UITableViewDataSource {
 extension LastLevelMedicineController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let medicineDetailController = storyboard?.instantiateViewControllerWithIdentifier("MedicineDetailController") as! MedicineDetailController
+        let medicineName = lastLevelMedicines[indexPath.row].name
+        titleItme.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        medicineDetailController.medicineID = lastLevelMedicines[indexPath.row].id
+        medicineDetailController.medicineType = medicineType
+        medicineDetailController.medicineName = medicineName
+        
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(medicineDetailController, animated: true)
+        self.hidesBottomBarWhenPushed = false
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+    
 }
 
