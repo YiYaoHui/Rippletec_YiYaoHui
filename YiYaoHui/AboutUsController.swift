@@ -25,7 +25,11 @@ class AboutUsController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

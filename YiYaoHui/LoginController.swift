@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import Alamofire
+
+protocol LoginDelegate {
+    func loginSuccess()
+}
 
 class LoginController: UIViewController {
     //
@@ -18,7 +23,15 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var loginView: UIView!
     
+    var delegate: LoginDelegate!
+    
+    let baseURL = "http://112.74.131.194:8080/MedicineProject/App/login"
+    let personalController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("personalController")
 
+    var account:String?
+    var cipher:String?
+    var identifierForVendor:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,8 +64,25 @@ class LoginController: UIViewController {
         performSegueWithIdentifier("forgetCipher", sender: self)
     }
     
-    
+    //登陆请求
+    @IBAction func login(sender: AnyObject) {
 
+        identifierForVendor = UIDevice.currentDevice().identifierForVendor?.UUIDString
+        
+        Alamofire.request(.POST, baseURL, parameters: ["account":account!,"password":cipher!,"device":"2","deviceId":identifierForVendor!], encoding: .URL, headers: nil).responseJSON { (_, _, result) -> Void in
+            if let value = result.value {
+                
+                //随时保存登陆状态，同步到ns user defaults: 登陆成功的话，bool设成true。
+                NSUserDefaults.standardUserDefaults().setBool(false, forKey: "loginState")
+                NSUserDefaults.standardUserDefaults().synchronize()
+                self.delegate.loginSuccess()
+                
+                print("登陆",result)
+//                self.navigationController?.popViewControllerAnimated(true)
+                self.navigationController?.pushViewController(self.personalController, animated: true)
+            }
+        }
+    }
 }
 
 //text field 的
@@ -67,5 +97,10 @@ extension LoginController : UITextFieldDelegate {
         accountTF.resignFirstResponder()
         cipherTF.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        account = accountTF.text
+        cipher = cipherTF.text
     }
 }

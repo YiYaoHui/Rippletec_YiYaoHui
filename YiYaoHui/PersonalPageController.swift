@@ -8,8 +8,7 @@
 
 import UIKit
 
-class PersonalPageController: UIViewController {
-
+class PersonalPageController: UIViewController, LoginDelegate ,UIAlertViewDelegate{
 
     @IBOutlet weak var avatorImageView: UIImageView!
     
@@ -19,26 +18,34 @@ class PersonalPageController: UIViewController {
     
     @IBOutlet weak var settingButton: UIButton!
     
-    //为了可以合到master上，我减去了这么一句注释。。。
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var isLogin: Bool!
+    
+    
+    lazy var backgroundView: UIView = {
+        let _backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height))
+        
+        _backgroundView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        
+        return _backgroundView
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-
-        settingButton.layer.cornerRadius = 12.5
-        settingButton.layer.borderColor = UIColor.whiteColor().CGColor
-        settingButton.layer.borderWidth = 1.0
         
-        loginButton.layer.cornerRadius = 15.0
-        loginButton.layer.borderColor = UIColor.whiteColor().CGColor
-        loginButton.layer.borderWidth = 1.0
+        //记录初始登陆状态
+        isLogin = NSUserDefaults.standardUserDefaults().boolForKey("loginState")
+//        isLogin = false
         
-        avatorImageView.layer.cornerRadius = 40
-        avatorImageView.clipsToBounds = true
+        print(isLogin)
         
-        personalTableView.tableFooterView = UIView(frame: CGRectZero)
+        setUpUI()
         
-        navigationController?.navigationBarHidden = true
+        personalTableView.registerNib(UINib(nibName: "optionCell", bundle: nil), forCellReuseIdentifier: "optionCell")
         
     }
     
@@ -47,10 +54,13 @@ class PersonalPageController: UIViewController {
     }
     
     override func viewWillDisappear(animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        //这样写修复了一个bug
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    //跳到登陆界面
     @IBAction func login(sender: AnyObject) {
+        (sender as! UIButton).hidden = true
         performSegueWithIdentifier("login", sender: self)
     }
     
@@ -58,12 +68,88 @@ class PersonalPageController: UIViewController {
         performSegueWithIdentifier("setting", sender: self)
     }
     
+    func setUpUI() {
+        
+        loginButton.layer.cornerRadius = 15.0
+        loginButton.layer.borderColor = UIColor.whiteColor().CGColor
+        loginButton.layer.borderWidth = 1.0
+
+        avatorImageView.layer.cornerRadius = 40
+        avatorImageView.clipsToBounds = true
+        
+        personalTableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        settingButton.layer.cornerRadius = 12.5
+        settingButton.layer.borderColor = UIColor.whiteColor().CGColor
+        settingButton.layer.borderWidth = 1.0
+        
+        if isLogin == false {
+            settingButton.hidden = true
+            settingButton.layer.opacity = 0.0
+            
+            nameLabel.hidden = true
+            nameLabel.layer.opacity = 0.0
+            
+            loginButton.hidden = false
+        }
+        else {
+            loginButton.hidden = true
+        }
+
+    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "login" {
+            let destinationVC = segue.destinationViewController as! LoginController
+            destinationVC.delegate = self
+        }
+    }
+    
+    //MARK: 对登陆成功做出响应
+    func loginSuccess() {
+        settingButton.hidden = false
+        nameLabel.hidden = false
+        self.personalTableView.reloadData()
+        UIView.animateWithDuration(0.2) { () -> Void in
+            self.settingButton.layer.opacity = 1.0
+            self.nameLabel.layer.opacity = 1.0
+        }
+    }
+    //MARK: 对AlertView的按钮点击做出响应
+//    func alertView(button clickedButton: UIButton) {
+//        
+//        if clickedButton.tag == 202 {
+//            loginButton.hidden = false
+//            loginButton.layer.opacity = 0
+//            
+//            UIView.animateWithDuration(0.2, animations: { () -> Void in
+//                self.loginButton.layer.opacity = 1.0
+//                self.settingButton.layer.opacity = 0.0
+//                self.nameLabel.layer.opacity = 0.0
+//                }, completion: { (_) -> Void in
+//                    self.settingButton.hidden = true
+//                    self.nameLabel.hidden = true
+//                    self.avatorImageView.image = UIImage(named: "avator")
+//                    NSUserDefaults.standardUserDefaults().setBool(false, forKey: "loginState")
+//                    self.personalTableView.reloadData()
+//            })
+//        }
+//        
+//        self.tabBarController?.tabBar.hidden = false
+//        
+//        clickedButton.superview?.superview?.removeFromSuperview()
+//        backgroundView.hidden = true
+//    }
+
 }
 
 extension PersonalPageController: UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        isLogin = NSUserDefaults.standardUserDefaults().boolForKey("loginState")
+        if isLogin == true {
+            return 3
+        }
         return 2
     }
     
@@ -71,8 +157,10 @@ extension PersonalPageController: UITableViewDataSource {
         switch section {
         case 0:
             return 1
-        default:
+        case 1:
             return 3
+        default: //退出登陆的
+            return 1
         }
     }
     
@@ -82,17 +170,23 @@ extension PersonalPageController: UITableViewDataSource {
         if indexPath.section == 0 {
             
         }
+        
         else {
-            switch indexPath.row {
-            case 0:
-                cell.typeImageView.image = UIImage(named: "about")
-                cell.typeLabel.text = "关于我们"
-            case 1:
-                cell.typeImageView.image = UIImage(named: "share")
-                cell.typeLabel.text = "分享给朋友"
-            default:
-                cell.typeImageView.image = UIImage(named: "feedback")
-                cell.typeLabel.text = "意见反馈"
+            if indexPath.section == 1 {
+                switch indexPath.row {
+                case 0:
+                    cell.typeImageView.image = UIImage(named: "about")
+                    cell.typeLabel.text = "关于我们"
+                case 1:
+                    cell.typeImageView.image = UIImage(named: "share")
+                    cell.typeLabel.text = "分享给朋友"
+                default:
+                    cell.typeImageView.image = UIImage(named: "feedback")
+                    cell.typeLabel.text = "意见反馈"
+                }
+            } else {
+                cell.typeImageView.image = UIImage(named: "exit")
+                cell.typeLabel.text = "退出登录"
             }
         }
         return cell
@@ -142,7 +236,32 @@ extension PersonalPageController: UITableViewDelegate {
             
             performSegueWithIdentifier("feedback", sender: self)
             
+        } else if indexPath.section == 2 {
+            
+            
+            let alert = UIAlertController(title: "提示", message: "确定退出吗？", preferredStyle: .Alert)
+        
+            let saveAction = UIAlertAction(title: "确定", style: .Default) { (action:UIAlertAction) -> Void in
+
+                self.settingButton.hidden = true
+                self.nameLabel.hidden = true
+                self.avatorImageView.image = UIImage(named: "avator")
+                NSUserDefaults.standardUserDefaults().setBool(false, forKey: "loginState")
+            }
+        
+            let cancelAction = UIAlertAction(title: "取消", style: .Default) { (action:UIAlertAction) -> Void in
+                //弹出框按了“取消”，然后取消操作为空即可。
+            }
+        
+            alert.addAction(saveAction)
+            alert.addAction(cancelAction)
+            presentViewController(alert, animated: true, completion: nil)
         }
+            
+        else if indexPath.section == 1 && indexPath.row == 2 {
+            self.performSegueWithIdentifier("feedback", sender: self)
+        }
+
 
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }

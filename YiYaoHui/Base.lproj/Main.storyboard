@@ -617,7 +617,7 @@
         <!--Personal Page Controller-->
         <scene sceneID="XHC-sZ-rCE">
             <objects>
-                <viewController id="lKT-rv-wr7" customClass="PersonalPageController" customModule="YiYaoHui" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="personalController" id="lKT-rv-wr7" customClass="PersonalPageController" customModule="YiYaoHui" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4DF-B5-1KF"/>
                         <viewControllerLayoutGuide type="bottom" id="06A-eX-CKb"/>
@@ -662,27 +662,41 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-9T-S2Z" userLabel="Setting Button">
-                                            <rect key="frame" x="508" y="30" width="72" height="22"/>
+                                            <rect key="frame" x="526" y="26" width="60" height="26"/>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="22" id="BRl-nO-utB"/>
-                                                <constraint firstAttribute="width" constant="72" id="GFJ-lU-1OD"/>
+                                                <constraint firstAttribute="height" constant="26" id="BRl-nO-utB"/>
+                                                <constraint firstAttribute="width" constant="60" id="GFJ-lU-1OD"/>
                                             </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <state key="normal" title="设置" image="setting"/>
                                             <connections>
                                                 <action selector="setting:" destination="lKT-rv-wr7" eventType="touchUpInside" id="ptC-D8-stR"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是xxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4R-H7-fhF" userLabel="name Label">
+                                            <rect key="frame" x="160" y="138" width="280" height="30"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="280" id="amz-6D-8KD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" red="0.58823529409999997" green="0.46274509800000002" blue="0.83921568629999999" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="6Wt-NK-l8A" firstAttribute="centerX" secondItem="Y32-lJ-ruU" secondAttribute="centerX" id="2Ob-4f-rug"/>
+                                        <constraint firstAttribute="bottom" secondItem="u4R-H7-fhF" secondAttribute="bottom" constant="12" id="Cji-Cl-o5k"/>
                                         <constraint firstItem="ND9-ST-5If" firstAttribute="centerY" secondItem="Y32-lJ-ruU" secondAttribute="centerY" id="G61-RG-yy1"/>
+                                        <constraint firstItem="u4R-H7-fhF" firstAttribute="top" secondItem="ND9-ST-5If" secondAttribute="bottom" constant="8" id="dYe-Yx-us6"/>
                                         <constraint firstItem="6Wt-NK-l8A" firstAttribute="top" secondItem="ND9-ST-5If" secondAttribute="bottom" constant="8" id="hZ0-vr-8PP"/>
                                         <constraint firstItem="ND9-ST-5If" firstAttribute="centerX" secondItem="Y32-lJ-ruU" secondAttribute="centerX" id="oSs-7k-elb"/>
-                                        <constraint firstItem="lfr-9T-S2Z" firstAttribute="top" secondItem="Y32-lJ-ruU" secondAttribute="top" constant="30" id="wDK-U9-Cmh"/>
-                                        <constraint firstAttribute="trailing" secondItem="lfr-9T-S2Z" secondAttribute="trailing" constant="20" id="xCb-8o-qhm"/>
+                                        <constraint firstItem="u4R-H7-fhF" firstAttribute="centerX" secondItem="Y32-lJ-ruU" secondAttribute="centerX" id="sM3-Hh-7kg"/>
+                                        <constraint firstItem="lfr-9T-S2Z" firstAttribute="top" secondItem="Y32-lJ-ruU" secondAttribute="top" constant="26" id="wDK-U9-Cmh"/>
+                                        <constraint firstAttribute="trailing" secondItem="lfr-9T-S2Z" secondAttribute="trailing" constant="14" id="xCb-8o-qhm"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -756,6 +770,7 @@
                     <connections>
                         <outlet property="avatorImageView" destination="ND9-ST-5If" id="VE4-3w-fzV"/>
                         <outlet property="loginButton" destination="6Wt-NK-l8A" id="ue1-o5-OPw"/>
+                        <outlet property="nameLabel" destination="u4R-H7-fhF" id="uQ6-jC-89f"/>
                         <outlet property="personalTableView" destination="fof-Lb-DYa" id="eVG-Em-o7W"/>
                         <outlet property="settingButton" destination="lfr-9T-S2Z" id="YdT-TH-A8g"/>
                         <segue destination="gB6-cb-xYF" kind="show" identifier="showCollection" id="9Or-0f-SN1"/>
@@ -1767,6 +1782,9 @@
                                         <state key="normal" title="登陆">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="login:" destination="LDf-f8-hQz" eventType="touchUpInside" id="R9C-wF-yxm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -1797,6 +1815,20 @@
                                     <action selector="forgetCipher:" destination="LDf-f8-hQz" eventType="touchUpInside" id="hVU-EN-aeI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKT-nE-Nsg" userLabel="cancelLoginButton">
+                                <rect key="frame" x="20" y="513" width="60" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VSv-FP-3tM"/>
+                                    <constraint firstAttribute="width" constant="60" id="Xeu-Sx-Wff"/>
+                                </constraints>
+                                <state key="normal" title="取消登陆">
+                                    <color key="titleColor" red="0.58823529409999997" green="0.46274509800000002" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lKT-rv-wr7" kind="show" id="OeZ-5G-IGs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1808,11 +1840,13 @@
                             <constraint firstItem="bfj-C7-9wP" firstAttribute="top" secondItem="VGq-XN-eLi" secondAttribute="bottom" constant="58" id="c7I-he-pRj"/>
                             <constraint firstAttribute="trailing" secondItem="r9P-On-htt" secondAttribute="trailing" constant="20" id="cxr-sw-JK8"/>
                             <constraint firstAttribute="trailing" secondItem="VGq-XN-eLi" secondAttribute="trailing" id="fi0-Ac-KrA"/>
+                            <constraint firstItem="pd5-rI-qkG" firstAttribute="top" secondItem="aKT-nE-Nsg" secondAttribute="bottom" constant="8" id="fkV-KJ-Wa2"/>
                             <constraint firstItem="VGq-XN-eLi" firstAttribute="leading" secondItem="n9D-hq-VrN" secondAttribute="leading" id="iWa-Wv-4v7"/>
                             <constraint firstItem="pd5-rI-qkG" firstAttribute="top" secondItem="cUb-Ux-mP1" secondAttribute="bottom" constant="8" id="jFt-1q-Pjw"/>
                             <constraint firstItem="r9P-On-htt" firstAttribute="top" secondItem="bfj-C7-9wP" secondAttribute="bottom" constant="44" id="keE-2H-siU"/>
                             <constraint firstItem="r9P-On-htt" firstAttribute="leading" secondItem="n9D-hq-VrN" secondAttribute="leading" constant="20" id="mSC-XA-TdC"/>
                             <constraint firstAttribute="trailing" secondItem="bfj-C7-9wP" secondAttribute="trailing" constant="20" id="rwJ-tc-94n"/>
+                            <constraint firstItem="aKT-nE-Nsg" firstAttribute="leading" secondItem="n9D-hq-VrN" secondAttribute="leadingMargin" id="sMF-UK-mBD"/>
                             <constraint firstItem="r9P-On-htt" firstAttribute="leading" secondItem="n9D-hq-VrN" secondAttribute="leading" constant="41" id="wHq-Mr-alH"/>
                         </constraints>
                         <variation key="default">
@@ -2980,6 +3014,9 @@
         <image name="personal_icon" width="29" height="29"/>
         <image name="psycaid" width="99" height="96"/>
         <image name="rightArrow" width="40" height="40"/>
-        <image name="setting" width="18" height="18"/>
+        <image name="setting" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="OeZ-5G-IGs"/>
+    </inferredMetricsTieBreakers>
 </document>
