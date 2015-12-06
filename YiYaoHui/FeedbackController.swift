@@ -31,8 +31,13 @@ class FeedbackController: UIViewController {
         textFieldView.layer.borderWidth = 1.0
         textFieldView.layer.borderColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1).CGColor
         
-        SuggestionTextView.text = "请填写您的宝贵意见："
         navigationController?.navigationBarHidden = false
+        
+        SuggestionTextView.text = "请填写您的宝贵意见："
+        //使textview不受navigation bar影响，可以使内容置顶显示。
+        self.automaticallyAdjustsScrollViewInsets = false
+        SuggestionTextView.layer.borderWidth = 1.0
+        SuggestionTextView.layer.borderColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1).CGColor
     }
 
     override func didReceiveMemoryWarning() {

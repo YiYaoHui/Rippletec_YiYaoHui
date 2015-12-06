@@ -1784,7 +1784,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUb-Ux-mP1" userLabel="forgetCipherButton">
-                                <rect key="frame" x="501" y="513" width="60" height="30"/>
+                                <rect key="frame" x="520" y="513" width="60" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Lrh-1h-qB0"/>
@@ -1804,7 +1804,7 @@
                             <constraint firstAttribute="trailing" secondItem="r9P-On-htt" secondAttribute="trailing" constant="39" id="BCp-7g-cG9"/>
                             <constraint firstItem="bfj-C7-9wP" firstAttribute="leading" secondItem="n9D-hq-VrN" secondAttribute="leading" constant="20" id="K0J-Ck-Wcm"/>
                             <constraint firstItem="VGq-XN-eLi" firstAttribute="top" secondItem="n9D-hq-VrN" secondAttribute="top" id="REP-oG-S4I"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cUb-Ux-mP1" secondAttribute="trailing" constant="19" id="TsH-Yc-Bgh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cUb-Ux-mP1" secondAttribute="trailing" id="TsH-Yc-Bgh"/>
                             <constraint firstItem="bfj-C7-9wP" firstAttribute="top" secondItem="VGq-XN-eLi" secondAttribute="bottom" constant="58" id="c7I-he-pRj"/>
                             <constraint firstAttribute="trailing" secondItem="r9P-On-htt" secondAttribute="trailing" constant="20" id="cxr-sw-JK8"/>
                             <constraint firstAttribute="trailing" secondItem="VGq-XN-eLi" secondAttribute="trailing" id="fi0-Ac-KrA"/>

@@ -15,7 +15,7 @@ class AboutUsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        iconView.layer.cornerRadius = 5
+        iconView.layer.cornerRadius = 15.0
         iconView.clipsToBounds = true
         
     }
