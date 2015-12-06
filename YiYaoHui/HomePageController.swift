@@ -16,12 +16,12 @@ class HomePageController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
-        
+        navigationController?.navigationBarHidden = true
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        navigationController?.navigationBarHidden = true
+        
     }
 
     /*

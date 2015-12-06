@@ -32,12 +32,12 @@ class LastestMeetingController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationController?.navigationBarHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        navigationController?.navigationBarHidden = true
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func getMeetingsData() {

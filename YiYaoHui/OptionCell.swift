@@ -13,6 +13,7 @@ class OptionCell: UITableViewCell {
     
     @IBOutlet weak var optionImageView: UIImageView!
     @IBOutlet weak var optionLabel: UILabel!
+    @IBOutlet weak var rightImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
