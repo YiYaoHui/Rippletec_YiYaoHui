@@ -175,7 +175,28 @@ extension PersonalPageController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 {
-            performSegueWithIdentifier("showCollection", sender: self)
+            isLogin = NSUserDefaults.standardUserDefaults().boolForKey("loginState")
+            if isLogin == true {
+                performSegueWithIdentifier("showCollection", sender: self)
+            }
+
+            //没有登陆的话显示弹框
+//            isLogin = NSUserDefaults.standardUserDefaults().boolForKey("loginState")
+//            if isLogin == false {
+//                let alert = UIAlertController(title: "您尚未登陆", message: "无法查看收藏", preferredStyle: .Alert)
+//                let saveAction = UIAlertAction(title: "登陆", style: .Default) { (action:UIAlertAction) -> Void in
+//                    //                     performSegueWithIdentifier("login", sender:self.PersonalPageController)
+//                    //                    self.navigationController?.pushViewController(self.loginController, animated: true)
+//                    
+//                }
+//                
+//                let cancelAction = UIAlertAction(title: "取消", style: .Default) { (action:UIAlertAction) -> Void in
+//                    //弹出框按了“取消”，然后取消操作为空即可。
+//                }
+//                
+//                alert.addAction(saveAction)
+//                alert.addAction(cancelAction)
+//                presentViewController(alert, animated: true, completion: nil)
             
         } else if indexPath.section == 1 && indexPath.row == 0 {
             performSegueWithIdentifier("aboutUS", sender: self)
