@@ -69,16 +69,15 @@ class LoginController: UIViewController {
 
         identifierForVendor = UIDevice.currentDevice().identifierForVendor?.UUIDString
         
-        Alamofire.request(.POST, baseURL, parameters: ["account":account!,"password":cipher!,"device":"2","deviceId":identifierForVendor!], encoding: .URL, headers: nil).responseJSON { (_, _, result) -> Void in
+        Alamofire.request(.POST, baseURL, parameters: ["account":"18813756456","password":"123456","device":"2","deviceId":identifierForVendor!], encoding: .URL, headers: nil).responseJSON { (_, _, result) -> Void in
             if let value = result.value {
                 
                 //随时保存登陆状态，同步到ns user defaults: 登陆成功的话，bool设成true。
-                NSUserDefaults.standardUserDefaults().setBool(false, forKey: "loginState")
+                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "loginState")
                 NSUserDefaults.standardUserDefaults().synchronize()
                 self.delegate.loginSuccess()
                 
                 print("登陆",result)
-//                self.navigationController?.popViewControllerAnimated(true)
                 self.navigationController?.pushViewController(self.personalController, animated: true)
             }
         }

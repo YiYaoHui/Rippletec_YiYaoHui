@@ -109,37 +109,14 @@ class PersonalPageController: UIViewController, LoginDelegate ,UIAlertViewDelega
     func loginSuccess() {
         settingButton.hidden = false
         nameLabel.hidden = false
+        loginButton.hidden = true
         self.personalTableView.reloadData()
         UIView.animateWithDuration(0.2) { () -> Void in
             self.settingButton.layer.opacity = 1.0
             self.nameLabel.layer.opacity = 1.0
         }
+        tabBarController?.tabBar.hidden = false
     }
-    //MARK: 对AlertView的按钮点击做出响应
-//    func alertView(button clickedButton: UIButton) {
-//        
-//        if clickedButton.tag == 202 {
-//            loginButton.hidden = false
-//            loginButton.layer.opacity = 0
-//            
-//            UIView.animateWithDuration(0.2, animations: { () -> Void in
-//                self.loginButton.layer.opacity = 1.0
-//                self.settingButton.layer.opacity = 0.0
-//                self.nameLabel.layer.opacity = 0.0
-//                }, completion: { (_) -> Void in
-//                    self.settingButton.hidden = true
-//                    self.nameLabel.hidden = true
-//                    self.avatorImageView.image = UIImage(named: "avator")
-//                    NSUserDefaults.standardUserDefaults().setBool(false, forKey: "loginState")
-//                    self.personalTableView.reloadData()
-//            })
-//        }
-//        
-//        self.tabBarController?.tabBar.hidden = false
-//        
-//        clickedButton.superview?.superview?.removeFromSuperview()
-//        backgroundView.hidden = true
-//    }
 
 }
 
@@ -169,26 +146,23 @@ extension PersonalPageController: UITableViewDataSource {
         
         if indexPath.section == 0 {
             
+        } else if indexPath.section == 1 {
+            switch indexPath.row {
+                case 0:
+                cell.typeImageView.image = UIImage(named: "about")
+                cell.typeLabel.text = "关于我们"
+                case 1:
+                cell.typeImageView.image = UIImage(named: "share")
+                cell.typeLabel.text = "分享给朋友"
+                default:
+                cell.typeImageView.image = UIImage(named: "feedback")
+                cell.typeLabel.text = "意见反馈"
+            }
+        } else if indexPath.section == 2 {
+            cell.typeImageView.image = UIImage(named: "exit")
+            cell.typeLabel.text = "退出登录"
         }
         
-        else {
-            if indexPath.section == 1 {
-                switch indexPath.row {
-                case 0:
-                    cell.typeImageView.image = UIImage(named: "about")
-                    cell.typeLabel.text = "关于我们"
-                case 1:
-                    cell.typeImageView.image = UIImage(named: "share")
-                    cell.typeLabel.text = "分享给朋友"
-                default:
-                    cell.typeImageView.image = UIImage(named: "feedback")
-                    cell.typeLabel.text = "意见反馈"
-                }
-            } else {
-                cell.typeImageView.image = UIImage(named: "exit")
-                cell.typeLabel.text = "退出登录"
-            }
-        }
         return cell
     }
 
@@ -246,7 +220,13 @@ extension PersonalPageController: UITableViewDelegate {
                 self.settingButton.hidden = true
                 self.nameLabel.hidden = true
                 self.avatorImageView.image = UIImage(named: "avator")
+                //登陆按钮要出现
+                self.loginButton.hidden = false
+                
                 NSUserDefaults.standardUserDefaults().setBool(false, forKey: "loginState")
+                //同步登陆状态
+                NSUserDefaults.standardUserDefaults().synchronize()
+                self.personalTableView.reloadData()
             }
         
             let cancelAction = UIAlertAction(title: "取消", style: .Default) { (action:UIAlertAction) -> Void in
