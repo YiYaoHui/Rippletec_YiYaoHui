@@ -39,9 +39,8 @@ class PersonalPageController: UIViewController, LoginDelegate ,UIAlertViewDelega
         
         //记录初始登陆状态
         isLogin = NSUserDefaults.standardUserDefaults().boolForKey("loginState")
-//        isLogin = false
         
-        print(isLogin)
+        print("初始登陆状态",isLogin)
         
         setUpUI()
         
@@ -226,6 +225,7 @@ extension PersonalPageController: UITableViewDelegate {
                 NSUserDefaults.standardUserDefaults().setBool(false, forKey: "loginState")
                 //同步登陆状态
                 NSUserDefaults.standardUserDefaults().synchronize()
+//                print("退出后登陆状态")
                 self.personalTableView.reloadData()
             }
         
