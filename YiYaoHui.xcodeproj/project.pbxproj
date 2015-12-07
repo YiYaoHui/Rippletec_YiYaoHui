@@ -819,7 +819,7 @@
 					"\"SDWebImage\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.egetart.YiYaoHui;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RippleTec.YiYaoHui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "YiYaoHui/YiYaoHui-Bridging-Header.h";
@@ -856,7 +856,7 @@
 					"\"SDWebImage\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.egetart.YiYaoHui;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RippleTec.YiYaoHui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "YiYaoHui/YiYaoHui-Bridging-Header.h";

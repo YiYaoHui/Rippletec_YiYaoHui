@@ -15,10 +15,11 @@ class ModifyCipherController: UIViewController {
     @IBOutlet weak var newCipherTF: UITextField!
     
     @IBOutlet weak var modifyButton: UIButton!
-    //
-    
 
     @IBOutlet weak var modifyView: UIView!
+    
+    var oldCipher:String?
+    var newCipher:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,8 @@ class ModifyCipherController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
+    
 }
 
 //text field 的
@@ -58,4 +61,12 @@ extension ModifyCipherController : UITextFieldDelegate {
         newCipherTF.resignFirstResponder()
         return true
     }
+    
+    //接收原密码、新密码的text
+    func textFieldDidBeginEditing(textField: UITextField) {
+         oldCipher = oldCipherTF.text
+        newCipher = newCipherTF.text
+    }
+
+    
 }
