@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860C5DE61C147B5C00492EDC /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C5DE51C147B5C00492EDC /* AlertView.swift */; };
+		860C5DE81C147BDF00492EDC /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860C5DE71C147BDF00492EDC /* AlertView.xib */; };
 		868144F91C1169E600198090 /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868144F51C1169E600198090 /* FeedbackController.swift */; };
 		868144FA1C1169E600198090 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868144F61C1169E600198090 /* LoginController.swift */; };
 		868144FB1C1169E600198090 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868144F71C1169E600198090 /* RegisterController.swift */; };
@@ -85,6 +87,8 @@
 		2801D18AE00697317C85EF04 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		28C2594604854FF98FCAFC47 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		304B464D1123729F3A936311 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		860C5DE51C147B5C00492EDC /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		860C5DE71C147BDF00492EDC /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		868144F51C1169E600198090 /* FeedbackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
 		868144F61C1169E600198090 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		868144F71C1169E600198090 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -379,6 +383,7 @@
 				C1C63DA91C0D375100D6A015 /* MeetingCell.swift */,
 				C16ABF741C0FE10A007AAE28 /* HeaderCell.swift */,
 				C1F95F9D1C13E38700F50A0A /* DetailCell.swift */,
+				860C5DE51C147B5C00492EDC /* AlertView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 				C13D56181C0ACCA9005E9C32 /* Main.storyboard */,
 				C13D561D1C0ACCA9005E9C32 /* LaunchScreen.storyboard */,
 				C1C63DAA1C0D375100D6A015 /* MeetingCell.xib */,
+				860C5DE71C147BDF00492EDC /* AlertView.xib */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -573,6 +579,7 @@
 				868145271C11B25600198090 /* read_me.txt in Resources */,
 				868145291C11B25600198090 /* ShareSDK.bundle in Resources */,
 				C1C63DAC1C0D375100D6A015 /* MeetingCell.xib in Resources */,
+				860C5DE81C147BDF00492EDC /* AlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +658,7 @@
 				C17E735B1C0F399E007C155D /* FMDatabaseQueue.m in Sources */,
 				C17E73591C0F399E007C155D /* FMDatabaseAdditions.m in Sources */,
 				C1960C8D1C1334B400FDBA09 /* EnterprisePageController.swift in Sources */,
+				860C5DE61C147B5C00492EDC /* AlertView.swift in Sources */,
 				C1EEA63A1C0C9DB400B5A3EF /* PersonalCell.swift in Sources */,
 				868145001C11A8AF00198090 /* ModifyCipherController.swift in Sources */,
 				C16ABF751C0FE10A007AAE28 /* HeaderCell.swift in Sources */,
