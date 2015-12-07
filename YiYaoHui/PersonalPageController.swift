@@ -231,8 +231,8 @@ extension PersonalPageController: UITableViewDelegate {
             //创建分享参数
             let shareParames = NSMutableDictionary()
             
-            shareParames.SSDKSetupShareParamsByText("分享内容",
-                images : UIImage(named: "AppIcon.ing"),
+            shareParames.SSDKSetupShareParamsByText("医药信息中间平台，连接医生药企，去除中间环节，让他们能够通过平台传递直接的价值",
+                images : UIImage(named:"logo"),
                 url : NSURL(string:"http://112.74.131.194:8080/MedicineProject/SharePage/shareApp.html"),
                 title : "医药汇",
                 type : SSDKContentType.Auto)

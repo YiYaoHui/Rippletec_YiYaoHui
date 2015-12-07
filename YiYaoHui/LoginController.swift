@@ -69,7 +69,7 @@ class LoginController: UIViewController {
 
         identifierForVendor = UIDevice.currentDevice().identifierForVendor?.UUIDString
         
-        Alamofire.request(.POST, baseURL, parameters: ["account":account!,"password":cipher!,"device":"2","deviceId":identifierForVendor!], encoding: .URL, headers: nil).responseJSON { (_, _, result) -> Void in
+        Alamofire.request(.POST, baseURL, parameters: ["account":"18813756456","password":"234567","device":"2","deviceId":identifierForVendor!], encoding: .URL, headers: nil).responseJSON { (_, _, result) -> Void in
             if let value = result.value {
                 
                 //随时保存登陆状态，同步到ns user defaults: 登陆成功的话，bool设成true。
