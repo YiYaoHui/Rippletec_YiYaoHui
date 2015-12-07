@@ -80,6 +80,7 @@ class LoginController: UIViewController {
                 NSUserDefaults.standardUserDefaults().setValue(self.cipher, forKey: "cipher")
                 
                 print("登陆",result)
+//                print(self.identifierForVendor)
                 self.navigationController?.pushViewController(self.personalController, animated: true)
             }
         }

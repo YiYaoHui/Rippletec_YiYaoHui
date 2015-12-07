@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PersonalPageController: UIViewController, LoginDelegate ,UIAlertViewDelegate{
 
@@ -21,7 +22,8 @@ class PersonalPageController: UIViewController, LoginDelegate ,UIAlertViewDelega
     @IBOutlet weak var nameLabel: UILabel!
     
     var isLogin: Bool!
-    
+    //上传头像地址
+    let avatorImageURL = "http://112.74.131.194:8080/MedicineProject/upload/image/portrait"
     
     lazy var backgroundView: UIView = {
         let _backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height))
@@ -302,8 +304,19 @@ extension PersonalPageController: UIImagePickerControllerDelegate, UINavigationC
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        avatorImageView.image = image
+        let avatorImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        //上传头像
+        Alamofire.request(.POST, avatorImageURL, parameters: ["img":avatorImage], encoding: .URL, headers: nil).responseJSON { (_, _, result) -> Void in
+            if let value = result.value {
+                self.avatorImageView.image = avatorImage
+                print(result)
+            } else {
+            print("头像上传不成功")
+            //如果上传不成功，怎么办。。。
+            }
+        }
+        
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
 }
