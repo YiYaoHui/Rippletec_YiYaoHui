@@ -267,31 +267,38 @@ extension PersonalPageController: UIImagePickerControllerDelegate, UINavigationC
     
     @IBAction func changeAvator(sender: AnyObject) {
         
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        //未登陆不能点击头像
+        isLogin = NSUserDefaults.standardUserDefaults().boolForKey("loginState")
         
-        let albumAction = UIAlertAction(title: "从相册获取", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
+        if isLogin == false {
+            //不能点击头像，操作为空即可。
+        } else {
+            let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+            let albumAction = UIAlertAction(title: "从相册获取", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
             //MARK: waitting to do
             
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-            self.presentViewController(imagePicker, animated: true, completion: nil)
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+                self.presentViewController(imagePicker, animated: true, completion: nil)
+            }
+        
+            let cameraAction = UIAlertAction(title: "拍照", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+                self.presentViewController(imagePicker, animated: true, completion: nil)
+            }
+        
+            let cancleAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+            actionSheet.addAction(albumAction)
+            actionSheet.addAction(cameraAction)
+            actionSheet.addAction(cancleAction)
+        
+            self.presentViewController(actionSheet, animated: true, completion: nil)
         }
-        
-        let cameraAction = UIAlertAction(title: "拍照", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-            self.presentViewController(imagePicker, animated: true, completion: nil)
-        }
-        
-        let cancleAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
-        
-        actionSheet.addAction(albumAction)
-        actionSheet.addAction(cameraAction)
-        actionSheet.addAction(cancleAction)
-        
-        self.presentViewController(actionSheet, animated: true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
