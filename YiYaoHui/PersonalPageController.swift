@@ -22,8 +22,11 @@ class PersonalPageController: UIViewController, LoginDelegate ,UIAlertViewDelega
     @IBOutlet weak var nameLabel: UILabel!
     
     var isLogin: Bool!
+    
     //上传头像地址
     let avatorImageURL = "http://112.74.131.194:8080/MedicineProject/upload/image/portrait"
+    let homeDirectory = NSHomeDirectory()
+    var filePath = ""
     
     lazy var backgroundView: UIView = {
         let _backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height))
@@ -45,6 +48,10 @@ class PersonalPageController: UIViewController, LoginDelegate ,UIAlertViewDelega
         print("初始登陆状态",isLogin)
         
         setUpUI()
+        
+        //头像本地存储地址
+        let fileUrl = NSURL(string: homeDirectory)!.URLByAppendingPathComponent("/Documents/avator.png")
+        filePath = "\(fileUrl)"
         
         personalTableView.registerNib(UINib(nibName: "optionCell", bundle: nil), forCellReuseIdentifier: "optionCell")
         
@@ -92,9 +99,20 @@ class PersonalPageController: UIViewController, LoginDelegate ,UIAlertViewDelega
             nameLabel.layer.opacity = 0.0
             
             loginButton.hidden = false
+            
+            avatorImageView.image = UIImage(named: "avator")
+
         }
         else {
             loginButton.hidden = true
+            
+            if let image = UIImage(contentsOfFile: filePath) {
+                avatorImageView.image = image
+            }
+            else {
+                avatorImageView.image = UIImage(named: "avator")
+            }
+
         }
 
     }
@@ -117,6 +135,15 @@ class PersonalPageController: UIViewController, LoginDelegate ,UIAlertViewDelega
             self.nameLabel.layer.opacity = 1.0
         }
         tabBarController?.tabBar.hidden = false
+        
+        if let image = UIImage(contentsOfFile: filePath) {
+            avatorImageView.image = image
+        }
+        else {
+            avatorImageView.image = UIImage(named: "avator")
+        }
+
+        
     }
 
 }
@@ -205,9 +232,9 @@ extension PersonalPageController: UITableViewDelegate {
             let shareParames = NSMutableDictionary()
             
             shareParames.SSDKSetupShareParamsByText("分享内容",
-                images : UIImage(named: "shareImg.png"),
-                url : NSURL(string:"http://mob.com"),
-                title : "分享标题",
+                images : UIImage(named: "AppIcon.ing"),
+                url : NSURL(string:"http://112.74.131.194:8080/MedicineProject/SharePage/shareApp.html"),
+                title : "医药汇",
                 type : SSDKContentType.Auto)
             //2.进行分享 ，添加了多少个进白名单，弹框就有多少个。
             ShareSDK.showShareActionSheet(self.view, items:nil, shareParams: shareParames) { (state : SSDKResponseState, platformType : SSDKPlatformType, userdata : [NSObject : AnyObject]!, contentEnity : SSDKContentEntity!, error : NSError!, Bool end) -> Void in
@@ -275,20 +302,22 @@ extension PersonalPageController: UIImagePickerControllerDelegate, UINavigationC
         if isLogin == false {
             //不能点击头像，操作为空即可。
         } else {
+            
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true
+            
+            
             let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
         
             let albumAction = UIAlertAction(title: "从相册获取", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
             //MARK: waitting to do
             
-                let imagePicker = UIImagePickerController()
-                imagePicker.delegate = self
                 imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
                 self.presentViewController(imagePicker, animated: true, completion: nil)
             }
         
             let cameraAction = UIAlertAction(title: "拍照", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
-                let imagePicker = UIImagePickerController()
-                imagePicker.delegate = self
                 imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
                 self.presentViewController(imagePicker, animated: true, completion: nil)
             }
@@ -304,20 +333,49 @@ extension PersonalPageController: UIImagePickerControllerDelegate, UINavigationC
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+       
         let avatorImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        //上传头像
-        Alamofire.request(.POST, avatorImageURL, parameters: ["img":avatorImage], encoding: .URL, headers: nil).responseJSON { (_, _, result) -> Void in
-            if let value = result.value {
-                self.avatorImageView.image = avatorImage
-                print(result)
-            } else {
-            print("头像上传不成功")
-            //如果上传不成功，怎么办。。。
-            }
-        }
+        avatorImageView.image = avatorImage
+        
+        uploadAvator(avatorImage)
         
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    //MARK: Upload user's avator
+    func uploadAvator(avator: UIImage) {
+        saveAvator(avator)
+        
+        //我就这里没有session id
+        let headers = ["Content-Type": "multipart/form-data"]
+        
+        let fileURL = NSURL(fileURLWithPath: filePath)
+        
+        Alamofire.upload(
+            .POST,avatorImageURL,
+            headers: headers,
+            multipartFormData: { multipartFormData in
+                multipartFormData.appendBodyPart(fileURL: fileURL, name: "img")
+            },
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .Success(let upload, _, _):
+                    upload.responseJSON { response in
+//                        print(response)
+                        print("上传头像成功")
+                    }
+                case .Failure(let encodingError):
+                    print(encodingError)
+                    print("上传头像失败")
+                }
+        })
+    }
+    
+    func saveAvator(avator: UIImage) {
+        UIImagePNGRepresentation(avator)!.writeToFile(filePath, atomically: true)
+    }
+
+    
 }
 

@@ -82,6 +82,13 @@ class LoginController: UIViewController {
                 print("登陆",result)
 //                print(self.identifierForVendor)
                 self.navigationController?.pushViewController(self.personalController, animated: true)
+            } else {
+                NSUserDefaults.standardUserDefaults().setBool(false, forKey: "loginState")
+                NSUserDefaults.standardUserDefaults().synchronize()
+                let alert = UIAlertController(title: "登陆失败", message: "请检查您的帐号和密码是否有误", preferredStyle: UIAlertControllerStyle.Alert)
+                let action = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default, handler: nil)
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
             }
         }
     }
