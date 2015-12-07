@@ -35,6 +35,13 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        var str = "   fhhjjjdjhh   "
+//        str = str.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: " "))
+        print(str)
+
+        
+        
         // Do any additional setup after loading the view.
         registerButton.layer.cornerRadius = 5
         loginButton.layer.cornerRadius = 5
@@ -69,30 +76,45 @@ class LoginController: UIViewController {
 
         identifierForVendor = UIDevice.currentDevice().identifierForVendor?.UUIDString
         
+        
         //"account":"18813756456","password":"123456"
-        Alamofire.request(.POST, baseURL, parameters: ["account":account! ,"password":cipher!,"device":"2","deviceId":identifierForVendor!], encoding: .URL, headers: nil).responseJSON { (_, _, result) -> Void in
-            if let value = result.value {
+            if ((accountTF.text != nil  && cipherTF.text != nil) && (accountTF.text != "" && cipherTF.text != ""))
+//
+            {
+                Alamofire.request(.POST, baseURL, parameters: ["account":account! ,"password":cipher!,"device":"2","deviceId":identifierForVendor!], encoding: .URL, headers: nil).responseJSON { (_, _, result) -> Void in
+                    if let value = result.value {
+//                        let state = value["result"] as! String
+                        //随时保存登陆状态，同步到ns user defaults: 登陆成功的话，bool设成true。
+                        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "loginState")
+                        NSUserDefaults.standardUserDefaults().synchronize()
+                        self.delegate.loginSuccess()
+                        NSUserDefaults.standardUserDefaults().setValue(self.account, forKey: "account")
+                        NSUserDefaults.standardUserDefaults().setValue(self.cipher, forKey: "cipher")
                 
-                //随时保存登陆状态，同步到ns user defaults: 登陆成功的话，bool设成true。
-                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "loginState")
-                NSUserDefaults.standardUserDefaults().synchronize()
-                self.delegate.loginSuccess()
-                NSUserDefaults.standardUserDefaults().setValue(self.account, forKey: "account")
-                NSUserDefaults.standardUserDefaults().setValue(self.cipher, forKey: "cipher")
-                
-                print("登陆",result)
-//                print(self.identifierForVendor)
-                self.navigationController?.pushViewController(self.personalController, animated: true)
-            } else {
+                        print("登陆", result)
+
+                        self.navigationController?.pushViewController(self.personalController, animated: true)
+                    } else {
+                        NSUserDefaults.standardUserDefaults().setBool(false, forKey: "loginState")
+                        NSUserDefaults.standardUserDefaults().synchronize()
+                        let alert = UIAlertController(title: "登陆失败", message: "请检查您的帐号和密码是否有误", preferredStyle: UIAlertControllerStyle.Alert)
+                        let action = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default, handler: nil)
+                        alert.addAction(action)
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
+                }
+            }
+    else {
                 NSUserDefaults.standardUserDefaults().setBool(false, forKey: "loginState")
                 NSUserDefaults.standardUserDefaults().synchronize()
-                let alert = UIAlertController(title: "登陆失败", message: "请检查您的帐号和密码是否有误", preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "信息输入不正确", message: "帐号和密码均不能为空", preferredStyle: UIAlertControllerStyle.Alert)
                 let action = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default, handler: nil)
                 alert.addAction(action)
                 self.presentViewController(alert, animated: true, completion: nil)
-            }
         }
+    
     }
+    
 }
 
 //text field 的
